@@ -1,0 +1,125 @@
+{
+    "personal": [
+        {
+            "name": "plague",
+            "title": "Unannounced Co-Op",
+            "coverimage":"plague-cover.png",
+            "hidden": true,
+            "type": "game"
+        },
+        {
+            "name": "codware-2",
+            "title": "CODWare 2",
+            "coverimage":"codware2-cover.jpg",
+            "logoimage":"codware2-logo.png",
+            "type": "game"
+        },
+        {
+            "name": "alienvs",
+            "title": "Extinction: Ground War",
+            "logoimage":"ground-war-logo.png",
+            "type": "game"
+        },
+        {
+            "name": "smash",
+            "title": "Smash Ops",
+            "coverimage":"smashops-cover.png",
+            "logoimage":"smash_ops_logo.png",
+            "type": "game"
+        },
+        {
+            "name": "bossrush",
+            "title": "Boss Rush",
+            "coverimage":"bossrush-cover.png",
+            "logoimage":"boss-rush-infinite.png",
+            "type": "game",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games -- having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the \"Nega-Wisp Armor\" and \"Infinite\", with initial plans for more in the future."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The goal of this project was to create a flexible gamemode that would allow developers to easily introduce new enemies and encounters to the game by plugging into a core system. This core system would supply methods to track the time, score, lives, and declare victory and failure states for the game. The system also enabled management for hotjoining, and was my first venture into working with UI programming, involving a new heads-up-display for weapons, stats (such as score, time), and dynamic values such as boss health and name."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/bossrush/br_lobby_fp.jpg",
+                            "subtitle": "The \"pre-game lobby\" inside of Boss Rush."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Each encounter would follow the same pre-game structure -- when starting a match, players would be thrown into a \"pre-game lobby\" of sorts where players could wait, choose loadouts and plan before starting the game. Players would start an encounter by walking into the large black hole on the far side of the lobby. Once the black hole was entered, late-joining players would no longer be allowed to spawn -- this was a gameplay rule set so that people couldn't leave and rejoin once they were out of lives. This lobby was part of every encounter map, and was required in order for your map to run the gamemode properly."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The pre-game lobby setup helped each encounter feel part of the same connected world. The intention was for the player to acknowledge that, in-world, \"Infinite\" was creating each of these encounters, as his character centers around creating \"illusions\" that feel very much real; as a result, the pre-game lobby was designed after Sonic Forces' \"Null Space\" area -- a location between realities that \"Infinite\" creates things from."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Upon starting an encounter, all players will be moved into the encounter play area and will be greeted with a cutscene. Each encounter has its own, unique live intro cinematic to help make each encounter feel special, and set an initial tone for the upcoming battle. At this point, the game's state is now mid-battle -- the timer will start, players will lose lives upon death, and players will also begin to have their score tracked."
+                        }
+                    ]
+                },
+                {
+                    "title": "BOSS: Nega-Wisp Armor",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/bossrush/br_negawisp_fp.jpg",
+                            "subtitle": "Mid-encounter against the \"Nega-Wisp Armor\", one of the two encounters available at launch."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Each encounter has its own flow, such as the type of play area or the way the enemy AI will behave. In this case, the \"Nega-Wisp Armor\" enemy's arena is a ring that the players will travel along. This fight is designed to constantly be moving, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed -- this keeps a sense of urgency, and will ensure players don't just stand still during the encounter."
+                        },
+                        {
+                            "type": "text",
+                            "value": " The \"Nega-Wisp Armor\" enemy AI is designed to properly change its forward distance from the player depending on the attack -- for instance, when doing the \"Cube\" attack, the enemy will move much further down the track to place down a maze of cubes that players must navigate through, while during the \"Laser\" attack, the enemy will only move forward a small amount to drag a laser beam across the field, making players chain jumps and slides together in order to avoid taking damage."
+                        }
+                    ]
+                },
+                {
+                    "title": "BOSS: Infinite",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "empty"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "mindshare",
+            "title": "Mindshare",
+            "coverimage":"mindshare-cover.png",
+            "logoimage":"mindshare-icon.png",
+            "type": "game"
+        },
+        {
+            "name": "codware",
+            "title": "CODWare",
+            "coverimage":"codware-cover.jpg",
+            "logoimage":"codware-logo.png",
+            "type": "game"
+        }
+    ],
+    "pro": [
+        {
+            "name": "mojivr",
+            "title": "MojiRelax VR",
+            "logoimage":"mojilife-vr-logo.png",
+            "type": "web"
+        },
+        {
+            "name": "mojilife",
+            "title": "MojiLife",
+            "logoimage":"mojilife-logo.png",
+            "type": "web"
+        }
+    ]
+}

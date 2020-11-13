@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Tate Player</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <!-- todo: add these -->
+  <!--
+    Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  -->
+</html>
+<style>
+/*-----------------
+  FONTS
+-----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+/*-----------------
+  END FONTS
+-----------------*/
+
+html, body {
+  margin:0;
+  min-height:100%;
+}
+
+body {
+  min-height:100%;
+  position:relative;
+}
+
+h1, h2, h3, h4, h5 {
+  margin:0;
+}
+
+/*
+  NAVIGATION
+*/
+
+.main-navigation {
+  position:fixed;
+  width:100%;
+  height:116px;
+  background-color:rgb( 32, 32, 32 );
+  z-index:10;
+}
+
+.main-navigation-buffer {
+  width:100%;
+  height:116px;
+}
+
+.main-navigation-inner {
+  height:100%;
+}
+
+.main-navigation-wrapper {
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.main-navigation-title {
+  font-family:"Roboto";
+  font-weight:200;
+  color:white;
+  font-size:42px;
+  text-decoration: none;
+}
+
+.main-navigation-separator {
+  width:0;
+  height:50%;
+  border-left:1px white solid;
+  border-right:1px white solid;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+#main-navigation-list-outer {
+  height:50%;
+}
+
+#main-nav-list {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+
+#main-nav-list > li {
+  display:flex;
+  align-items: center;
+  font-family:"Roboto";
+  color:white;
+  font-weight:200;
+  font-size:18px;
+  float:left;
+  padding:5px;
+  height:100%;
+  background: linear-gradient( to bottom, rgb( 32, 32, 32 ) 50%, white 50%);
+  background-size:100% 200%;
+  background-position:left top;
+  transition:background-position 500ms ease;
+}
+
+#main-nav-list > li > a {
+  display:block;
+  color:inherit;
+  text-decoration: none;
+}
+
+#main-nav-list > li:hover {
+  background-position:left bottom;
+}
+
+#main-nav-list > li:hover > a {
+  transition:color 500ms ease;
+  color:rgb( 32, 32, 32 );
+}
+
+/*
+  APP MAIN
+*/
+
+#app {
+  background-color:rgb( 20, 20, 20 );
+  min-height:100vh;
+}
+
+.sectional {
+  height:100%;
+  padding-top:116px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+@media only screen and ( max-width:720px )
+{
+  .sectional {
+    width:100%;
+    margin:0;
+  }
+  .main-navigation-title {
+    font-size:24px;
+  }
+}
+
+
+
+</style>
