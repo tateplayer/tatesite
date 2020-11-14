@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5 {
   height:116px;
   background-color:rgb( 32, 32, 32 );
   z-index:10;
+  box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .main-navigation-buffer {
@@ -114,7 +115,9 @@ h1, h2, h3, h4, h5 {
   background: linear-gradient( to bottom, rgb( 32, 32, 32 ) 50%, white 50%);
   background-size:100% 200%;
   background-position:left top;
-  transition:background-position 500ms ease;
+  transition:all 500ms ease;
+  transition-property:background-position, color;
+  cursor:pointer;
 }
 
 #main-nav-list > li > a {
@@ -125,11 +128,21 @@ h1, h2, h3, h4, h5 {
 
 #main-nav-list > li:hover {
   background-position:left bottom;
+  color:rgb( 32, 32, 32 )
 }
 
 #main-nav-list > li:hover > a {
   transition:color 500ms ease;
   color:rgb( 32, 32, 32 );
+}
+
+#main-nav-name {
+  max-width:300px;
+  transition:all 750ms linear;
+  transition-property:opacity, max-width;
+  overflow:hidden;
+  width:auto;
+  white-space:nowrap;
 }
 
 /*

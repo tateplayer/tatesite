@@ -16,13 +16,27 @@
             <h2 class="main-navigation-title">{{ content.title }}</h2>
           </div>
         </div>
-        <div v-for="(value, index) in content.values" v-bind:key="index" class="section-text-container">
+        <div v-for="(value, index) in content.values" v-bind:key="index" class="section-container">
           <p v-if="value.type === 'text'">{{ value.value }}</p>
           <div v-else-if="value.type == 'image'" class="section-project-image">
             <img :src="value.value"/>
             <div class="image-comment">
               {{ value.subtitle }}
             </div>
+          </div>
+          <div v-else-if="value.type == 'youtube'" class="section-project-video">
+            <iframe src="https://www.youtube.com/embed/io_geMEyhek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div v-if="project_details.url" class="project-section">
+        <div class="section-container">
+          <div class="outbound-project-link-container">
+            <a :href="project_details.url" target="_blank">
+              <div class="outbound-project-link-button">
+                Visit Project
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -130,19 +144,19 @@ export default {
     align-items:center;
     width:50%;
   }
-  .section-text-container {
+  .section-container {
     width:80%;
     margin:0 auto;
+    padding-top:20px;
+    padding-bottom:20px;
   }
-  .section-text-container > p {
+  .section-container > p {
     font-family:"Roboto";
     font-weight:200;
     font-size:18px;
     color:white;
     text-indent:5%;
     margin:0;
-    padding-top:10px;
-    padding-bottom:10px;
   }
   .section-project-image {
     font-size:0;
@@ -161,6 +175,40 @@ export default {
     padding-top:15px;
     padding-bottom:15px;
     color:white;
+  }
+  .outbound-project-link-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+  }
+  .outbound-project-link-container > a {
+    width:50%;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:rgb(10, 10, 10);
+    color:white;
+    font-family:"Roboto";
+    box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.25);
+    text-decoration:none;
+    font-size:32px;
+    font-weight:200;
+  }
+  .outbound-project-link-button {
+  }
+  .section-project-video {
+    position:relative;
+    width:100%;
+    height: 0;
+    padding-bottom:50%;
+  }
+  .section-project-video > iframe {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
   }
   @media only screen and ( max-width:720px )
   {

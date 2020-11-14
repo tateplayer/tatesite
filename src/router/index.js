@@ -6,11 +6,11 @@ import Home from '@/components/Home'
 import Projects from '@/components/Projects'
 
 // PROJECT VIEWS
-import projectView from '@/components/projects/layout'
+import projectView from '@/components/projects/Layout'
 
 Vue.use(Router)
 
-export default new Router({
+var router = new Router({
   routes: [
     {
       path: '/',
@@ -29,5 +29,10 @@ export default new Router({
       component: projectView
     }
   ],
-  mode: "history"
+  mode: "history",
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0, behavior: "smooth" }
+  }
 })
+
+export default router

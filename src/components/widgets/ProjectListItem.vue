@@ -122,7 +122,7 @@ export default {
     display:flex;
     align-items: center;
     justify-content: flex-end;
-    z-index:5;
+    z-index:2;
   }
   .project-list-item-label h2 {
     font-family:"Roboto";
