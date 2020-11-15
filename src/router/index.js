@@ -6,7 +6,7 @@ import Home from '@/components/Home'
 import Projects from '@/components/Projects'
 
 // PROJECT VIEWS
-import projectView from '@/components/projects/Layout'
+import projectView from '@/components/projects/layout'
 
 Vue.use(Router)
 
