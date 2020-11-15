@@ -25,18 +25,16 @@
             </div>
           </div>
           <div v-else-if="value.type == 'youtube'" class="section-project-video">
-            <iframe src="https://www.youtube.com/embed/io_geMEyhek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe :src="value.value" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
-      <div v-if="project_details.url" class="project-section">
-        <div class="section-container">
-          <div class="outbound-project-link-container">
-            <a :href="project_details.url" target="_blank">
-              <div class="outbound-project-link-button">
-                Visit Project
-              </div>
-            </a>
+          <div v-else-if="value.type == 'outbound-url'" class="section-container">
+            <div class="outbound-project-link-container">
+              <a :href="project_details.url" target="_blank">
+                <div class="outbound-project-link-button">
+                  {{ value.value }}
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -106,6 +104,7 @@ export default {
     background-color:rgb( 32, 32, 32 );
     min-height:100vh;
     box-shadow:0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+    padding-bottom:116px;
   }
   .project-title-wrapper {
     width:100%;
@@ -131,7 +130,6 @@ export default {
   .section-title {
     position:relative;
     padding-top:60px;
-    margin-bottom:50px;
   }
   .section-title-inner {
     display:flex;
@@ -148,7 +146,6 @@ export default {
     width:80%;
     margin:0 auto;
     padding-top:20px;
-    padding-bottom:20px;
   }
   .section-container > p {
     font-family:"Roboto";
@@ -181,27 +178,32 @@ export default {
     align-items:center;
     justify-content:center;
     width:100%;
+    padding-bottom:40px;
   }
   .outbound-project-link-container > a {
     width:50%;
     text-align:center;
     padding-top:20px;
     padding-bottom:20px;
-    background-color:rgb(10, 10, 10);
+    background-color:rgb(20, 20, 20);
     color:white;
     font-family:"Roboto";
     box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.25);
     text-decoration:none;
     font-size:32px;
     font-weight:200;
+    transition:transform 250ms ease-in-out;
+    cursor:pointer;
   }
-  .outbound-project-link-button {
+  .outbound-project-link-container > a:hover {
+    transform:scale(1.1)
   }
   .section-project-video {
     position:relative;
     width:100%;
     height: 0;
     padding-bottom:50%;
+    box-shadow:0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   }
   .section-project-video > iframe {
     position:absolute;

@@ -56,15 +56,11 @@ export default {
   methods: {
     updateHeaderStyles: function () {
       if (this.$route.name !== "home") {
-        this.navTitleStyle = {
-          maxWidth: "300px",
-          opacity: 100
-        }
+        this.navTitleStyle.opacity = 100
+        this.navTitleStyle.maxWidth = "300px"
       } else {
-        this.navTitleStyle = {
-          maxWidth: "0px",
-          opacity: 0
-        }
+        this.navTitleStyle.opacity = 0
+        this.navTitleStyle.maxWidth = "0px"
       }
     }
   }

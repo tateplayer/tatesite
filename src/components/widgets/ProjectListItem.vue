@@ -12,7 +12,12 @@
 
    </div>
    <div class="project-list-item-label">
-     <h2 v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'20px', delay:'100'}">{{ title }}</h2>
+      <div class="project-list-item-label-name">
+        <h2 v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'20px', delay:'100'}">{{ title }}</h2>
+      </div>
+      <div v-if="launchdate" class="project-list-item-label-date">
+        <h2 v-resize-text="{ratio:'1.2', minFontSize:'14px', maxFontSize:'18px', delay:'100'}">{{ launchdate }}</h2>
+      </div>
    </div>
   </div>
  </router-link>
@@ -32,6 +37,10 @@ export default {
     logoimage: String,
     hidden: Boolean,
     type: {
+      type: String,
+      required: false
+    },
+    launchdate: {
       type: String,
       required: false
     }
@@ -118,19 +127,30 @@ export default {
     right: 0;
     bottom: 30px;
     width: 80%;
-    height: 40px;
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
+    height: auto;
     z-index:2;
+    text-align:right;
+  }
+  .project-list-item-label-name {
+    padding-top:5px;
+    padding-bottom:5px;
   }
   .project-list-item-label h2 {
     font-family:"Roboto";
     font-weight:200;
-    padding-right:10%;
+    padding-right:5%;
     color:white;
     white-space: nowrap;
     font-size:20px;
+  }
+  .project-list-item-label-date {
+    padding-top:5px;
+    padding-bottom:5px;
+    background-color:rgb(20, 20, 20);
+  }
+  .project-list-item-label-date > h2 {
+    color:white;
+    font-weight:300;
   }
   .project-list-item-logo {
     display:flex;

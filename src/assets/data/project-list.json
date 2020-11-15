@@ -1,31 +1,78 @@
 {
     "personal": [
         {
-            "name": "plague",
-            "title": "Unannounced Co-Op",
+            "name": "tba-1",
+            "title": "TBA",
             "coverimage":"plague-cover.png",
-            "hidden": true,
-            "type": "game"
+            "hidden": false,
+            "type": "game",
+            "launchdate": "2021"
         },
         {
             "name": "codware-2",
             "title": "CODWare 2",
             "coverimage":"codware2-cover.jpg",
             "logoimage":"codware2-logo.png",
-            "type": "game"
+            "type": "game",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "youtube",
+                            "value": "https://www.youtube.com/embed/Bdep4rxs5hM"
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        },
+                        {
+                            "type": "text",
+                            "value": "CODWare 2 was a complete from-scratch remake of CODWare 1. It was built to be a nice, smooth experience compared to the original version, allowing the rest of the team and I to showcase how our abilities have improved since the first installment. It also introduced several new minigames, updates to old ones, and new features like persistent player progression. For a referesher, CODWare is a gamemode where players are all in the same arena and will compete in several back-to-back minigames, each of which increases in speed as the match goes on, until the players must all face a major minigame at the end known as a \"Boss Round\". These minigames would rewards the players with points, and the player with the most points at the end of the game was declared the victor."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Like its predecessor, CODWare 2's design philosophy was to provide a casual, lightly-competitive party environment for players to enjoy -- where skill wasn't really the important part, and the game was mostly about having fun. It was centered around being a jump-in-and-play experience that any type of player could hop into, supporting up to 18 players -- but ideally played with 8-10 players."
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this project included leading the team, designing & scripting the gamemode structure, and designing & scripting each component in the gamemode including minigames, boss games, special game rules and the overall flow of the game."
+                        }
+                    ]
+                }
+            ],
+            "launchdate": "Feb 2020"
         },
         {
             "name": "alienvs",
             "title": "Extinction: Ground War",
             "logoimage":"ground-war-logo.png",
-            "type": "game"
+            "type": "game",
+            "launchdate": "Incomplete - 2020"
         },
         {
             "name": "smash",
             "title": "Smash Ops",
             "coverimage":"smashops-cover.png",
             "logoimage":"smash_ops_logo.png",
-            "type": "game"
+            "type": "game",
+            "launchdate": "Oct 2018",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "youtube",
+                            "value": "https://www.youtube.com/embed/D6xD4lnIafc"
+                        }   
+                    ]
+                }
+            ]
         },
         {
             "name": "bossrush",
@@ -42,13 +89,26 @@
                             "value": "https://www.youtube.com/embed/io_geMEyhek"
                         },
                         {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        },
+                        {
                             "type": "text",
-                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games -- having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of."
+                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games -- having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
                         },
                         {
                             "type": "text",
                             "value": "The goal of this project was to create a flexible gamemode that would allow developers to easily introduce new enemies and encounters to the game by plugging into a core system, while also providing a fresh new gamemode for players to dive into. This core system would supply methods to track the time, score, lives, and declare victory and failure states for the game. The system also enabled management for hotjoining, and was my first venture into working with UI programming, involving a new heads-up-display for weapons, stats (such as score, time), and dynamic values such as boss health and name."
                         },
+                        {
+                            "type": "text",
+                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
                         {
                             "type": "text",
                             "value": "My responsibilities on this project included leading the team, designing each encounter (incl. level blockout), structuring & writing the systems for the gamemode, structuring & writing the script that ran the AI for each encounter, VFX, and writing the code that displayed the UI and dynamically changed UI values on-screen."
@@ -62,6 +122,10 @@
                 {
                     "title": "Project Breakdown",
                     "values": [
+                        {
+                            "type": "text",
+                            "value": "Boss Rush's structure is split into encounters, with the gamemode's system encompassing each encounter. Each encounter is a separate map file, and sets the players up to fight through a sequence, whether it be one enemy or several. When an encounter is complete, players are returned to the menu and can choose another map (or encounter) to load into."
+                        },
                         {
                             "type": "image",
                             "value": "/static/projects/bossrush/br_lobby_fp.jpg",
@@ -100,7 +164,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Each encounter has its own flow, such as the type of play area or the way the enemy AI will behave. In this case, the Nega-Wisp Armor enemy's arena is a ring that the players will travel along. This fight is designed to constantly be moving, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed -- this keeps a sense of urgency, and will ensure players don't just stand still during the encounter."
+                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to constantly be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed -- this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
                         },
                         {
                             "type": "text",
@@ -185,39 +249,75 @@
                         {
                             "type": "text",
                             "value": "Upon depleting Infinite's health pool, the game will enter a cutscene state with an in-game rendered outro cinematic. Once this scene is completed, the game will end, the timer will stop and players will have their score reported to them."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         }
                     ]
                 }
             ],
-            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1532706684"
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1532706684",
+            "launchdate": "Oct 2018"
         },
         {
             "name": "mindshare",
             "title": "Mindshare",
             "coverimage":"mindshare-cover.png",
             "logoimage":"mindshare-icon.png",
-            "type": "game"
+            "type": "game",
+            "launchdate": "Sep 2017",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "youtube",
+                            "value": "https://www.youtube.com/embed/jNZ_DUbaCZI"
+                        }   
+                    ]
+                }
+            ]
         },
         {
             "name": "codware",
             "title": "CODWare",
             "coverimage":"codware-cover.jpg",
             "logoimage":"codware-logo.png",
-            "type": "game"
+            "type": "game",
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=892207782",
+            "launchdate": "Mar 2017",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "youtube",
+                            "value": "https://www.youtube.com/embed/IXloZKbsz0I"
+                        }   
+                    ]
+                }
+            ]
         }
     ],
     "pro": [
         {
             "name": "mojivr",
             "title": "MojiLife VR",
+            "coverimage": "mojilife-vr-cover.jpg",
             "logoimage":"mojilife-vr-logo.png",
-            "type": "web"
+            "type": "web",
+            "url": "https://www.mojilifevr.com",
+            "launchdate": "Jan 2018"
         },
         {
             "name": "mojilife",
             "title": "MojiLife",
+            "coverimage": "mojilife-cover.jpg",
             "logoimage":"mojilife-logo.png",
-            "type": "web"
+            "type": "web",
+            "url": "https://www.mojiproducts.com",
+            "launchdate": "Dec 2016 - 2020"
         }
     ]
 }
