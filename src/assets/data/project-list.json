@@ -32,7 +32,11 @@
                         },
                         {
                             "type": "text",
-                            "value": "Like its predecessor, CODWare 2's design philosophy was to provide a casual, lightly-competitive party environment for players to enjoy -- where skill wasn't really the important part, and the game was mostly about having fun. It was centered around being a jump-in-and-play experience that any type of player could hop into, supporting up to 18 players -- but ideally played with 8-10 players."
+                            "value": "Like its predecessor, CODWare 2's design philosophy was to provide a casual, lightly-competitive party environment for players to enjoy — where skill wasn't really the important part, and the game was mostly about having fun. It was centered around being a jump-in-and-play experience that any type of player could hop into, supporting up to 18 players — but ideally played with 8-10 players. Short minigame instruction popups and wordplay keep players on their feet and laughing with and at each other."
+                        },
+                        {
+                            "type": "text",
+                            "value": "CODWare, and CODWare 2, are both heavily inspired by TF2Ware, a modification for Team Fortress 2 that also takes inspiration from Nintendo's \"WarioWare\"."
                         }
                     ]
                 },
@@ -41,7 +45,73 @@
                     "values": [
                         {
                             "type": "text",
-                            "value": "My responsibilities on this project included leading the team, designing & scripting the gamemode structure, and designing & scripting each component in the gamemode including minigames, boss games, special game rules and the overall flow of the game."
+                            "value": "My responsibilities on this project included leading the team, designing & scripting the gamemode structure, and designing & scripting each component in the gamemode including minigames, boss games, special game rules and the overall flow of the game. I worked with the other developer on the team to provide him with requirements for each playable area for the minigame, as well as assisted in coming up with ideas for theming the world."
+                        }
+                    ]
+                },
+                {
+                    "title": "Project Breakdown",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "The flow of CODWare 2 begins with all of the players getting thrown into an arena with an empty score. While in this area, players can all see each other and hit each other with their chosen melee weapon, but no players can take damage. This lets players toy with each other and creates a bit of a \"punching bag\" effect for between rounds. During this introduction sequence, the game logic will roll to see if a \"Special Round\" should be enabled, which changes or adds fundamental rules of the game. After the introduction sequence is complete, the standard gameplay loop begins. This loop involves choosing one minigame from the full list of available minigames, and initializes it."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_arena_fp.jpg",
+                            "subtitle": "The main arena in CODWare 2."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Each minigame active is global, and every player that is part of the match is always involved in the minigame, so long as they have not been permanently disqualified by a special rule. When partcipating, players will earn 1 point if they successfully complete the minigame's instructions. Some minigames require a player to do something individually, i.e. \"Break the Target\", while some require players to engage with each other, i.e. \"Kill an Enemy\" — minigames all have variety, and all play very differently from each other, with each goal requiring players to have to adjust quickly."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_instruct_fp.jpg",
+                            "subtitle": "\"Fight and Stay Alive\" minigame."
+                        },
+                        {
+                            "type": "text",
+                            "value": "When a minigame begins, its instructions are displayed on the top of the player's HUD. Some instructions are straight forward, while some involve wordplay — for example, in this minigame, players will be told to \"Fight and Stay Alive\". Instinctively, players begin to fight each other and eliminate each other, but cunning players will understand that the instructions of the minigame state specifically to stay alive. If the player avoids conflict, without actually eliminating another player, they will earn a point."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Some minigames have special arenas to help shake things up and introduce new rules. A minigame like \"Avoid the Shark\" takes place inside of a pool, with one player acting as a \"shark\" while the other players have to avoid getting eliminated by that player. Another example of this is \"Get to the End\" — a minigame where players are teleported into an obstacle course, and are required to get to the end of the obstacle course before time runs out."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_alt_arena_fp.jpg",
+                            "subtitle": "\"Get to the End\" minigame and special arena."
+                        },
+                        {
+                            "type" :"text",
+                            "value": "Once a certain number of minigames is completed (typically 15), all players will need to participate in a \"Boss Round\" — these games are longer, larger minigames that sometimes pit players against each other in teams. The goals for these games can range from surviving in an asymmetrical setting, traveling a long obstacle course, shooting a number of targets and more. These rounds will reward the victorious player(s) with five points total rather than one point — these rounds are often used as an opportunity to snipe a win away from someone, allowing players to tip the scales by winning one of these rounds."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Some boss minigames may introduce extra special, invisible rules — for example, the \"Break the Target\" boss minigame allows players to kill each other with their supplied weapon. A killed player during this minigame is not eliminated, but will incur a respawn penalty, which will vastly reduce the amount of time they have to break targets."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_breaktarget_fp.jpg",
+                            "subtitle": "\"Break the Target\" minigame and special arena."
+                        },
+                        {
+                            "type": "text",
+                            "value": "After completing the boss game, all of the players' scores will be tallied up and compared. The player with the most points will be declared the victor, and it will be announced to the server. The victorious player is given their loadout (built by the player before loading into the match) and invulnerability. During this victory period, the winning player is allowed to recklessly kill all of the other players, while the other players cannot hurt each other or the victor. During the next match, the winning player will also be given a crown to represent their victory. This acts as a small reward, and allows the victorious player to have an \"in your face!\" moment to their friends and opponents."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_victor_fp.jpg",
+                            "subtitle": "\"Break the Target\" minigame and special arena."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare 2 is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         }
                     ]
                 }
@@ -94,7 +164,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games -- having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
+                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games — having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
                         },
                         {
                             "type": "text",
@@ -133,15 +203,15 @@
                         },
                         {
                             "type": "text",
-                            "value": "Each encounter follows the same pre-game structure -- when starting a match, players would be thrown into a \"pre-game lobby\" of sorts where players could wait, choose loadouts and plan before starting the game. Players would start an encounter by walking into the large black hole on the far side of the lobby. Once the black hole was entered, late-joining players would no longer be allowed to spawn -- this was a gameplay rule set so that people couldn't leave and rejoin once they were out of lives. This lobby was part of every encounter map, and was required in order for your map to run the gamemode properly."
+                            "value": "Each encounter follows the same pre-game structure — when starting a match, players would be thrown into a \"pre-game lobby\" of sorts where players could wait, choose loadouts and plan before starting the game. Players would start an encounter by walking into the large black hole on the far side of the lobby. Once the black hole was entered, late-joining players would no longer be allowed to spawn — this was a gameplay rule set so that people couldn't leave and rejoin once they were out of lives. This lobby was part of every encounter map, and was required in order for your map to run the gamemode properly."
                         },
                         {
                             "type": "text",
-                            "value": "The pre-game lobby setup helped each encounter feel part of the same connected world. The intention was for the player to acknowledge that, in-world, Infinite was creating each of these encounters, as his character centers around creating \"illusions\" that feel very much real; as a result, the pre-game lobby was designed after Sonic Forces' \"Null Space\" area -- a location between realities that Infinite creates things from."
+                            "value": "The pre-game lobby setup helped each encounter feel part of the same connected world. The intention was for the player to acknowledge that, in-world, Infinite was creating each of these encounters, as his character centers around creating \"illusions\" that feel very much real; as a result, the pre-game lobby was designed after Sonic Forces' \"Null Space\" area — a location between realities that Infinite creates things from."
                         },
                         {
                             "type": "text",
-                            "value": "Upon starting an encounter, all players will be moved into the encounter play area and will be greeted with a cutscene. Each encounter has its own, unique live intro cinematic to help make each encounter feel special, and set an initial tone for the upcoming battle. At this point, the game's state is now mid-battle -- the timer will start, players will lose lives upon death, and players will also begin to have their score tracked."
+                            "value": "Upon starting an encounter, all players will be moved into the encounter play area and will be greeted with a cutscene. Each encounter has its own, unique live intro cinematic to help make each encounter feel special, and set an initial tone for the upcoming battle. At this point, the game's state is now mid-battle — the timer will start, players will lose lives upon death, and players will also begin to have their score tracked."
                         },
                         {
                             "type": "image",
@@ -164,15 +234,15 @@
                         },
                         {
                             "type": "text",
-                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to constantly be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed -- this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
+                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to constantly be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed — this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
                         },
                         {
                             "type": "text",
-                            "value": "The Nega-Wisp Armor enemy AI is designed to properly change its forward distance from the player depending on the action -- for instance, when doing the \"Cube\" attack, the enemy will move much further down the track to place down a maze of cubes that players must navigate through, while during the \"Laser\" attack, the enemy will only move forward a small amount to drag a laser beam across the field, making players chain jumps and slides together in order to avoid taking damage."
+                            "value": "The Nega-Wisp Armor enemy AI is designed to properly change its forward distance from the player depending on the action — for instance, when doing the \"Cube\" attack, the enemy will move much further down the track to place down a maze of cubes that players must navigate through, while during the \"Laser\" attack, the enemy will only move forward a small amount to drag a laser beam across the field, making players chain jumps and slides together in order to avoid taking damage."
                         },
                         {
                             "type": "text",
-                            "value": "This enemy's design is a phase weak-points fight. Once the enemy has completed a certain chain number of attacks (which increases from 1 to 3 depending on how low the enemy's health is), the enemy will enter an \"idle\" state where a part of their body is weak to damage. Each weak point has a damage threshold, and once that damage threshold is reached, the enemy will react to the damage and flinch. During the flinch recovery animation, players will need to reach a second damage threshold check -- which increases based on living player count. Upon reaching this second damage threshold, the enemy will take a large amount of damage and become stunned. This presents an option to the players -- if they react quick enough, they can impact the enemy with an explosive or melee weapon, and deal a critical strike with a massive amount of damage that will launch the enemy further down the track. If the players do this optional piece, they will have a little bit of time to breathe before the enemy gets up, recovers and moves closer to the players again."
+                            "value": "This enemy's design is a phase weak-points fight. Once the enemy has completed a certain chain number of attacks (which increases from 1 to 3 depending on how low the enemy's health is), the enemy will enter an \"idle\" state where a part of their body is weak to damage. Each weak point has a damage threshold, and once that damage threshold is reached, the enemy will react to the damage and flinch. During the flinch recovery animation, players will need to reach a second damage threshold check — which increases based on living player count. Upon reaching this second damage threshold, the enemy will take a large amount of damage and become stunned. This presents an option to the players — if they react quick enough, they can impact the enemy with an explosive or melee weapon, and deal a critical strike with a massive amount of damage that will launch the enemy further down the track. If the players do this optional piece, they will have a little bit of time to breathe before the enemy gets up, recovers and moves closer to the players again."
                         },
                         {
                             "type": "image",
@@ -221,7 +291,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Infinite's attacks are all designed for single-player targeting, and all interact in a way that requires the player have to make quick, split-second decisions to avoid taking damage. As Infinite's health drops, he will chain more attacks before changing phases, introduce more attacks, and mutate pre-existing attacks. For instance, Infinite's initial attack list involves throwing three homing projectiles at their target -- but once the health drops to 60%, the number of projectiles will double. These reactive changes are designed to give the player a sense of urgency that Infinite is becoming more irritated, therefore throwing more at the player in order to stop them."
+                            "value": "Infinite's attacks are all designed for single-player targeting, and all interact in a way that requires the player have to make quick, split-second decisions to avoid taking damage. As Infinite's health drops, he will chain more attacks before changing phases, introduce more attacks, and mutate pre-existing attacks. For instance, Infinite's initial attack list involves throwing three homing projectiles at their target — but once the health drops to 60%, the number of projectiles will double. These reactive changes are designed to give the player a sense of urgency that Infinite is becoming more irritated, therefore throwing more at the player in order to stop them."
                         },
                         {
                             "type": "image",
@@ -230,7 +300,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Some of Infinite's reactive difficulty changes involve adding a new attack. This attack has Infinite summon a few pillars with lightning arcing off of them -- something clearly very dangerous! Infinite will then scatter these around their target player, creating a sort of \"cage\" around the player that lasts for ~1 minute. This cage is easily escapable, but if the player panics too hard, they will take a lot of damage before escaping the cage due to running into the pillars. This attack was added in order to slightly change up the flow of fighting Infinite, and enable him to take control of the play area a little bit more."
+                            "value": "Some of Infinite's reactive difficulty changes involve adding a new attack. This attack has Infinite summon a few pillars with lightning arcing off of them — something clearly very dangerous! Infinite will then scatter these around their target player, creating a sort of \"cage\" around the player that lasts for ~1 minute. This cage is easily escapable, but if the player panics too hard, they will take a lot of damage before escaping the cage due to running into the pillars. This attack was added in order to slightly change up the flow of fighting Infinite, and enable him to take control of the play area a little bit more."
                         },
                         {
                             "type": "image",
@@ -239,7 +309,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "The design of this fight is a damage-per-second fight with attack windows. During the duration of the fight, Infinite will have a red shield encapsulating them that will block all forms of incoming damage. After a certain number of attacks have been chained (which depends on the reactive difficulty), Infinite will teleport to the center of the arena and drop his shield to recharge it and heal himself. During this phase, a DPS check occurs in which players can do a certain amount of damage before Infinite is done recharging -- during which Infinite takes 1/2 incoming damage. If successful, Infinite will become stunned and will take full incoming damage while recovering from the stun. The stun, and heal phase, both last a different length based on the number of players in the match. When the reactive difficulty reaches a certain point, Infinite will instead fire an attack at players and juke to the side before entering his recharge state."
+                            "value": "The design of this fight is a damage-per-second fight with attack windows. During the duration of the fight, Infinite will have a red shield encapsulating them that will block all forms of incoming damage. After a certain number of attacks have been chained (which depends on the reactive difficulty), Infinite will teleport to the center of the arena and drop his shield to recharge it and heal himself. During this phase, a DPS check occurs in which players can do a certain amount of damage before Infinite is done recharging — during which Infinite takes 1/2 incoming damage. If successful, Infinite will become stunned and will take full incoming damage while recovering from the stun. The stun, and heal phase, both last a different length based on the number of players in the match. When the reactive difficulty reaches a certain point, Infinite will instead fire an attack at players and juke to the side before entering his recharge state."
                         },
                         {
                             "type": "image",
