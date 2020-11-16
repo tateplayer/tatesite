@@ -141,7 +141,50 @@
                         {
                             "type": "youtube",
                             "value": "https://www.youtube.com/embed/D6xD4lnIafc"
-                        }   
+                        },
+                        {
+                            "type": "text",
+                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. This gamemode was a more direct PvP approach -- players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. Smash Ops only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. It was heavily inspired by fighting games, namely \"Super Smash Brothers\" by Nintendo, but with a first-person spin on it."
+                        },
+                        {
+                            "type": "text",
+                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this project included designing gameplay from conception to the final product, directing level designers on the philosophy behind creating maps for the mode, designing and scripting the UI and gamemode. I also handled creating/designing VFX and scripted the UI on the side, as well as creating the Final Destination stage from blockout to final product."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project allowed me to learn a lot about balancing and taking in feedback from a QA group. I was able to learn what players liked fighting, disliked fighting, and how to tweak weapons and characters to make the game feel enjoyable to play and not like any character was immediately better than the rest."
+                        },
+                        {
+                            "type": "text",
+                            "value": "In designing and developing the Final Destination stage, I was able to create a fake 3D animated skybox by attaching a very large VFX element to the player's camera, and using timers to swap to other VFX elements to fake the feel of the stage \"moving\" through space."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gameplay Breakdown",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/smash/so_finaldest.png",
+                            "subtitle": "Final Destination, one of the stages available."
+                        }
                     ]
                 }
             ]
@@ -382,6 +425,15 @@
                     ]
                 },
                 {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this project included designing the gamemode from conception to the final product, scripting the gamemode and systems, and directing the level designer on the requirements for the arenas and minigames."
+                        }
+                    ]
+                },
+                {
                     "title": "Gameplay Breakdown",
                     "values": [
                         {
@@ -478,7 +530,15 @@
                         },
                         {
                             "type": "text",
+                            "value": "Once the event concludes, the minigame weighting is returned to normal, and all special event minigames are moved into the regular pool. Arena theming changes back to normal, but leaves behind a small mark of the previous event's theme permanently -- we wanted to give this arena a \"history\" as we pushed more events into the game."
+                        },
+                        {
+                            "type": "text",
                             "value": "Working on this update was very fun; it gave me the opportunity to evolve my gamemode and its structure, as well as play with a lot of new ideas, and give the environment a whole fresh atmosphere. Some things were very tricky to execute in the Call of Duty engine, but I put some extra effort in to bend the engine and make everything play the way I had in my head. Overall, this update was enjoyable to work on and I would love to do it again given the time and resources."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         }
                     ]
                 }
