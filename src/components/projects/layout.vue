@@ -27,14 +27,12 @@
           <div v-else-if="value.type == 'youtube'" class="section-project-video">
             <iframe :src="value.value" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div v-else-if="value.type == 'outbound-url'" class="section-container">
-            <div class="outbound-project-link-container">
-              <a :href="project_details.url" target="_blank">
-                <div class="outbound-project-link-button">
-                  {{ value.value }}
-                </div>
-              </a>
-            </div>
+          <div v-else-if="value.type == 'outbound-url'" class="outbound-project-link-container">
+            <a :href="project_details.url" target="_blank">
+              <div class="outbound-project-link-button">
+                {{ value.value }}
+              </div>
+            </a>
           </div>
         </div>
       </div>

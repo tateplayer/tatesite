@@ -37,6 +37,10 @@
                         {
                             "type": "text",
                             "value": "CODWare, and CODWare 2, are both heavily inspired by TF2Ware, a modification for Team Fortress 2 that also takes inspiration from Nintendo's \"WarioWare\"."
+                        },
+                        {
+                            "type": "text",
+                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
                         }
                     ]
                 },
@@ -46,68 +50,65 @@
                         {
                             "type": "text",
                             "value": "My responsibilities on this project included leading the team, designing & scripting the gamemode structure, and designing & scripting each component in the gamemode including minigames, boss games, special game rules and the overall flow of the game. I worked with the other developer on the team to provide him with requirements for each playable area for the minigame, as well as assisted in coming up with ideas for theming the world."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project allowed me to improve my system creation methods, creating cleaner and more readable systems for external developers to plug into, as well as improve overall code readability."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
                 {
-                    "title": "Project Breakdown",
+                    "title": "Sequel Changes Breakdown",
                     "values": [
                         {
                             "type": "text",
-                            "value": "The flow of CODWare 2 begins with all of the players getting thrown into an arena with an empty score. While in this area, players can all see each other and hit each other with their chosen melee weapon, but no players can take damage. This lets players toy with each other and creates a bit of a \"punching bag\" effect for between rounds. During this introduction sequence, the game logic will roll to see if a \"Special Round\" should be enabled, which changes or adds fundamental rules of the game. After the introduction sequence is complete, the standard gameplay loop begins. This loop involves choosing one minigame from the full list of available minigames, and initializes it."
+                            "value": "As CODWare 2 functions, from a gameplay perspective, nearly identically to CODWare 1, I figured I'd instead write the \"updates\" that occured in this sequelization."
                         },
+                        {
+                            "type": "text",
+                            "value": "CODWare 2's first change involves a total rewrite of the game's systems. The minigame system has been totally replaced with an API that makes it easy to plug in new minigames, and sort them between types -- standard and boss minigames. The API allows you to introduce a blocking minigame function for the actual minigame functionality, and a secondary function for handling whether or not the player should earn a point. A secondary function is optional, and will fall back to a normal functionality where players will score a point as long as they stayed alive. Minigames in this iteration of CODWare are all split into their own files based on an internal \"Series\"; all of the minigames available in the base game are part of \"Series 1\", and are all grouped up into a single script tree. If we were to introduce a second series, they would be given their own file and can easily be plugged in with a handful of lines of code."
+                        },
+                        {
+                            "type": "text",
+                            "value": "A feature was also introduced to help with tiebreakers -- previously in CODWare, ties in score would choose the winner at random between all players with tied scoress, but in CODWare 2, players are thrown into a special tiebreaker round where they have to run to the center of a maze before all other players."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Every minigame was re-written from scratch, allowing me to make more consistent feeling ones and removing the \"glitchiness\" feeling that some of the minigames gave off on the original versions due to my lessened experience at the time."
+                        }
+                    ]
+                },
+                {
+                    "title": "Screenshots",
+                    "values": [
                         {
                             "type": "image",
                             "value": "/static/projects/codware2/cw2_arena_fp.jpg",
-                            "subtitle": "The main arena in CODWare 2."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Each minigame active is global, and every player that is part of the match is always involved in the minigame, so long as they have not been permanently disqualified by a special rule. When partcipating, players will earn 1 point if they successfully complete the minigame's instructions. Some minigames require a player to do something individually, i.e. \"Break the Target\", while some require players to engage with each other, i.e. \"Kill an Enemy\" — minigames all have variety, and all play very differently from each other, with each goal requiring players to have to adjust quickly."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_instruct_fp.jpg",
-                            "subtitle": "\"Fight and Stay Alive\" minigame."
-                        },
-                        {
-                            "type": "text",
-                            "value": "When a minigame begins, its instructions are displayed on the top of the player's HUD. Some instructions are straight forward, while some involve wordplay — for example, in this minigame, players will be told to \"Fight and Stay Alive\". Instinctively, players begin to fight each other and eliminate each other, but cunning players will understand that the instructions of the minigame state specifically to stay alive. If the player avoids conflict, without actually eliminating another player, they will earn a point."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Some minigames have special arenas to help shake things up and introduce new rules. A minigame like \"Avoid the Shark\" takes place inside of a pool, with one player acting as a \"shark\" while the other players have to avoid getting eliminated by that player. Another example of this is \"Get to the End\" — a minigame where players are teleported into an obstacle course, and are required to get to the end of the obstacle course before time runs out."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_alt_arena_fp.jpg",
-                            "subtitle": "\"Get to the End\" minigame and special arena."
-                        },
-                        {
-                            "type" :"text",
-                            "value": "Once a certain number of minigames is completed (typically 15), all players will need to participate in a \"Boss Round\" — these games are longer, larger minigames that sometimes pit players against each other in teams. The goals for these games can range from surviving in an asymmetrical setting, traveling a long obstacle course, shooting a number of targets and more. These rounds will reward the victorious player(s) with five points total rather than one point — these rounds are often used as an opportunity to snipe a win away from someone, allowing players to tip the scales by winning one of these rounds."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Some boss minigames may introduce extra special, invisible rules — for example, the \"Break the Target\" boss minigame allows players to kill each other with their supplied weapon. A killed player during this minigame is not eliminated, but will incur a respawn penalty, which will vastly reduce the amount of time they have to break targets."
+                            "subtitle": "The main CODWare 2 Island arena."
                         },
                         {
                             "type": "image",
                             "value": "/static/projects/codware2/cw2_breaktarget_fp.jpg",
-                            "subtitle": "\"Break the Target\" minigame and special arena."
+                            "subtitle": "\"Break 3 Targets!\" boss game arena."
                         },
                         {
-                            "type": "text",
-                            "value": "After completing the boss game, all of the players' scores will be tallied up and compared. The player with the most points will be declared the victor, and it will be announced to the server. The victorious player is given their loadout (built by the player before loading into the match) and invulnerability. During this victory period, the winning player is allowed to recklessly kill all of the other players, while the other players cannot hurt each other or the victor. During the next match, the winning player will also be given a crown to represent their victory. This acts as a small reward, and allows the victorious player to have an \"in your face!\" moment to their friends and opponents."
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_instruct_fp.jpg",
+                            "subtitle": "\"Speed Up!\" minigame mechanic that increases minigame speed."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware2/cw2_shark_fp.jpg",
+                            "subtitle": "\"Avoid the Shark\" minigame arena."
                         },
                         {
                             "type": "image",
                             "value": "/static/projects/codware2/cw2_victor_fp.jpg",
-                            "subtitle": "\"Break the Target\" minigame and special arena."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare 2 is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
+                            "subtitle": "Player victory screen."
                         },
                         {
                             "type": "outbound-url",
@@ -186,12 +187,16 @@
                         },
                         {
                             "type": "text",
+                            "value": "Throughout this project, I learned about AI concepts such as managing and using behavior systems, state trees, and navigation. I also developed a system that made it easy implement new maps and encounters into the gamemode."
+                        },
+                        {
+                            "type": "text",
                             "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
                 {
-                    "title": "Project Breakdown",
+                    "title": "Gameplay Breakdown",
                     "values": [
                         {
                             "type": "text",
@@ -365,7 +370,116 @@
                         {
                             "type": "youtube",
                             "value": "https://www.youtube.com/embed/IXloZKbsz0I"
-                        }   
+                        },
+                        {
+                            "type": "text",
+                            "value": "CODWare was my first attempt at a PvP gamemode in a full-scale playercount (18 players maximum), as well as my first dive into a \"live-service\" approach for a project. This gamemode was what made me fall in love with developing PvP-type games, and also gave me an opportunity to develop a from-scratch gamemode to change Call of Duty into my own experience -- taking the standard PvP gameplay of the game, and spinning it on its head to be a fun, hop-in-and-go party game."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This gamemode initially started as a remake of the \"TF2Ware\" custom gamemode in Call of Duty, but eventually evolved into something more, adding new features, new minigames, and evolving past being only a remake. I introduced customization options, pre-game lobbies, unique new minigame ideas, and even took advantage of existing Call of Duty mechanics to create these minigames, such as wallrunning and jetpacks."
+                        }
+                    ]
+                },
+                {
+                    "title": "Gameplay Breakdown",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "The flow of CODWare and its sequel begins with all of the players getting thrown into an primary arena together. While in this area, players can all see each other and hit each other with their chosen melee weapon, but no players can take damage. This lets players toy with each other and creates a bit of a \"punching bag\" effect for between rounds. During this introduction sequence, the game logic will roll to see if a \"Special Round\" should be enabled, which changes or adds fundamental rules of the game. After the introduction sequence is complete, the standard gameplay loop begins. This loop involves choosing one minigame from the full list of available minigames, and initializes it."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_hatchet_fp.jpg",
+                            "subtitle": "\"Hatchet Toss\" minigame."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Each minigame active is global, and every player that is part of the match is always involved in the minigame, so long as they have not been permanently disqualified by a special rule. When partcipating, players will earn 1 point if they successfully complete the minigame's instructions. Some minigames require a player to do something individually, i.e. \"Nailgun Jump\", while some require players to interact with each other directly, i.e. \"Kill an Enemy\",  — minigames all have variety, and all play very differently from each other, with each goal requiring players to have to adjust quickly."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_nailjump_fp.jpg",
+                            "subtitle": "\"Nailgun Jump\" minigame."
+                        },
+                        {
+                            "type": "text",
+                            "value": "When a minigame begins, its instructions are displayed on the top of the player's HUD. Some instructions are straight forward, while some involve wordplay — for example, in this minigame, players will be told to \"Fight and Stay Alive\". Instinctively, players begin to fight each other and eliminate each other, but cunning players will understand that the instructions of the minigame state specifically to stay alive. If the player avoids conflict, without actually eliminating another player, they will earn a point. As the game goes on, minigames will increase in speed (or become shorter in duration), this tests players' ability to react and pushes them towards understanding each minute part of a minigame to make sure they can complete it in time."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Some minigames have special arenas to help shake things up and introduce new rules. A minigame like \"Avoid the Shark\" takes place inside of a pool, with one player acting as a \"shark\" while the other players have to avoid getting eliminated by that player. Another example of this is \"Get to the End\" — a minigame where players are teleported into an obstacle course, and are required to get to the end of the obstacle course before time runs out."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_platform_fp.jpg",
+                            "subtitle": "\"Get on a Platform!\" minigame."
+                        },
+                        {
+                            "type" :"text",
+                            "value": "Once a certain number of minigames is completed (typically 15), all players will need to participate in a \"Boss Round\" — these games are longer, larger minigames that sometimes pit players against each other in teams. The goals for these games can range from surviving in an asymmetrical setting, traveling a long obstacle course, shooting a number of targets and more. These rounds will reward the victorious player(s) with five points total rather than one point — these rounds are often used as an opportunity to snipe a win away from someone, allowing players to tip the scales by winning one of these rounds."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Some boss minigames may introduce extra special, invisible rules — for example, the \"Break the Target\" boss minigame allows players to kill each other with their supplied weapon. A killed player during this minigame is not eliminated, but will incur a respawn penalty, which will vastly reduce the amount of time they have to break targets."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_margwa_fp.jpg",
+                            "subtitle": "\"Break the Target\" minigame and special arena."
+                        },
+                        {
+                            "type": "text",
+                            "value": "After completing the boss game, all of the players' scores will be tallied up and compared. The player with the most points will be declared the victor, and it will be announced to the server. The victorious player is given their loadout (built by the player before loading into the match) and invulnerability. During this victory period, the winning player is allowed to recklessly kill all of the other players, while the other players cannot hurt each other or the victor. During the next match, the winning player will also be given a crown to represent their victory. This acts as a small reward, and allows the victorious player to have an \"in your face!\" moment to their friends and opponents."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare 2 is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        }
+                    ]
+                },
+                {
+                    "title": "\"Live Service\"",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_eggbot_invasion_fp.jpg",
+                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
+                        },
+                        {
+                            "type": "text",
+                            "value": "CODWare was my first attempt at \"live service\"; we had updates planned that would add new minigames and events. Due to time circumstances with my professional life, this \"live service\" dream wasn't quite realized past our first event, but the first event was still quite an enjoyable success that many players enjoyed coming back to the game for."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The first (and unfortunately last) event for CODWare was one themed after my favorite character in gaming \"Dr. Robotnik\" -- this is, of course, a fan project and has no direct affiliation with SEGA. The event, \"Dr. Robotnik's Invasion\", introduced a few new quality-of-life features, as well as five new minigames and three new boss minigames and an update to the atmosphere & environment. I had our level designer build \"audience stands\" into the main arena, which allowed me to add a fake audience of animated robotniks built by Dr. Robotnik -- I can't help but to add a little bit of extra atmosphere!"
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_robotnik_battle_fp.jpg",
+                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Events were a secondary structure to CODWare in this update, and added a couple fun features. When an event was active, just before the minigame sequence started, a special \"intro scene\" with an event logo would pop up to notify players that they are playing a limited-time, event version of CODWare. On top of this, the new minigames had a higher chance of being pulled from the pool, and players would always fight the \"Dr. Robotnik\" boss minigame at the end of a match in addition to the . Eventually, having to play this minigame at the end of every match became dull for players, so I ended up pulling that feature and just moved Robotnik into the boss games pool."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/codware/cw_robotnik_update_fp.jpg",
+                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
+                        },
+                        {
+                            "type": "text",
+                            "value": "These games also gave me an opportunity to introduce a new type of minigame: a competitive co-op minigame. In these minigames, every player would be pit up against a common enemy. Players who did the most damage to this common enemy would earn bonus points, and players who survived at all would qualify for points. Perma-death occurs during these games, so if all players die, everyone fails and nobody will earn any points, even if someone makes the most damage."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Working on this update was very fun; it gave me the opportunity to evolve my gamemode and its structure, as well as play with a lot of new ideas, and give the environment a whole fresh atmosphere. Some things were very tricky to execute in the Call of Duty engine, but I put some extra effort in to bend the engine and make everything play the way I had in my head. Overall, this update was enjoyable to work on and I would love to do it again given the time and resources."
+                        }
                     ]
                 }
             ]
