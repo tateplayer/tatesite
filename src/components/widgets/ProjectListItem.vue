@@ -141,7 +141,8 @@ export default {
     padding-right:5%;
     color:white;
     white-space: nowrap;
-    font-size:20px;
+    font-size:auto;
+    width:95%;
   }
   .project-list-item-label-date {
     padding-top:5px;
@@ -194,7 +195,7 @@ export default {
       width:70%;
     }
     .project-list-item-label {
-      width:50%;
+      width:80%;
     }
   }
 

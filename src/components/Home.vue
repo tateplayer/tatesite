@@ -126,4 +126,17 @@ export default {
     color:rgb(32, 32, 32);
     background-position:left bottom;
   }
+  @media only screen and (max-width:787px)
+  {
+    .home-info-column {
+      width:100%;
+      margin:0;
+    }
+    .home-info-name {
+      font-size:42px;
+    }
+    .home-info-job-titles {
+      font-size:26px;
+    }
+  }
 </style>

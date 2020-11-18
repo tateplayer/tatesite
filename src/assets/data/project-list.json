@@ -57,7 +57,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -70,11 +70,11 @@
                         },
                         {
                             "type": "text",
-                            "value": "CODWare 2's first change involves a total rewrite of the game's systems. The minigame system has been totally replaced with an API that makes it easy to plug in new minigames, and sort them between types -- standard and boss minigames. The API allows you to introduce a blocking minigame function for the actual minigame functionality, and a secondary function for handling whether or not the player should earn a point. A secondary function is optional, and will fall back to a normal functionality where players will score a point as long as they stayed alive. Minigames in this iteration of CODWare are all split into their own files based on an internal \"Series\"; all of the minigames available in the base game are part of \"Series 1\", and are all grouped up into a single script tree. If we were to introduce a second series, they would be given their own file and can easily be plugged in with a handful of lines of code."
+                            "value": "CODWare 2's first change involves a total rewrite of the game's systems. The minigame system has been totally replaced with an API that makes it easy to plug in new minigames, and sort them between types — standard and boss minigames. The API allows you to introduce a blocking minigame function for the actual minigame functionality, and a secondary function for handling whether or not the player should earn a point. A secondary function is optional, and will fall back to a normal functionality where players will score a point as long as they stayed alive. Minigames in this iteration of CODWare are all split into their own files based on an internal \"Series\"; all of the minigames available in the base game are part of \"Series 1\", and are all grouped up into a single script tree. If we were to introduce a second series, they would be given their own file and can easily be plugged in with a handful of lines of code."
                         },
                         {
                             "type": "text",
-                            "value": "A feature was also introduced to help with tiebreakers -- previously in CODWare, ties in score would choose the winner at random between all players with tied scoress, but in CODWare 2, players are thrown into a special tiebreaker round where they have to run to the center of a maze before all other players."
+                            "value": "A feature was also introduced to help with tiebreakers — previously in CODWare, ties in score would choose the winner at random between all players with tied scoress, but in CODWare 2, players are thrown into a special tiebreaker round where they have to run to the center of a maze before all other players."
                         },
                         {
                             "type": "text",
@@ -134,6 +134,7 @@
             "logoimage":"smash_ops_logo.png",
             "type": "game",
             "launchdate": "Oct 2018",
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1486119782",
             "content": [
                 {
                     "title": "Project Information",
@@ -143,12 +144,16 @@
                             "value": "https://www.youtube.com/embed/D6xD4lnIafc"
                         },
                         {
-                            "type": "text",
-                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. This gamemode was a more direct PvP approach -- players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         },
                         {
                             "type": "text",
-                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. Smash Ops only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. It was heavily inspired by fighting games, namely \"Super Smash Brothers\" by Nintendo, but with a first-person spin on it."
+                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. This gamemode was a more direct PvP approach — players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. Smash Ops only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. The download was split up into pieces, one being the actual gamemode module, the rest being the stages. This way, it was super easy to choose the gamemode from the menu and hop into a map, also enabling for swifter integration and allowing players to only download the maps they actively wanted to play."
                         },
                         {
                             "type": "text",
@@ -173,7 +178,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -184,6 +189,44 @@
                             "type": "image",
                             "value": "/static/projects/smash/so_finaldest.png",
                             "subtitle": "Final Destination, one of the stages available."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Smash Ops' gameplay loop is that of a standard PvP FFA game; eliminate the most opponents before time is up, or be the last one standing. The difference in this mode is that players do not eliminate each other through conventional means of whittling down a health bar — instead, players must knock their opponent out of the arena's playbounds, similar to a boxing match. The twist is that, instead of weapons doing damage to players directly, it increases the victim's \"knockback value\", a value which determines how far back taking damage will fling the player. As this knockback value increases, players will be launched back further, the speed of which is computed using the initial impact damage from the weapon as well as the player's knockback value as a multiplier."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Building off of Black Ops 3's built-in \"specialist characters\", I assigned loadouts to each character. Players will choose a character based on their loadout, will always spawn in with that loadout, and cannot pick up weapons from fallen enemies. Each character is assigned a primary ranged weapon, and a secondary melee weapon, and a few are also assigned grenades or explosives to make up for weaker primary weapons. On the UI, the player can see their own current knockback value, as well as a portrait of who they are playing as. We were able to work around cluttering the screen with other players' knockback values by adding the most recently attacked opponent's knockback value beneath the player's crosshair."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/smash/so_katana_fp.jpg",
+                            "subtitle":"First-person shot from Seraph's perspective, one of the characters. In the bottom left, a knockback value of 8 is visible."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Smash Ops shipped with two gamemodes — \"stock\" and \"time\". In time mode, players would have three minutes to battle it out. Each elimination a player earned would give them one point towards victory, and every death would subtract one point. The game would keep track of who the last person was to damage a player, so that way victims couldn't cheat someone out of a point by jumping off the stage. In stock mode, players would all be given three lives, and their objective was to outlive all other opponents — Once a player ran out of lives, they could not respawn, so the win condition was to be the last person standing by any means. In both modes, players could only be eliminated by falling off the arena, or being launched out of the playable bounds."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/smash/so_glacier_fp.jpg",
+                            "subtitle":"Glacier, a stage developed by team member \"HitmanVere\"."
+                        },
+                        {
+                            "type": "text",
+                            "value": "To assist with ammo issues on ranged weapons throughout the match, ammo boxes would periodically appear and drop onto the stage. These ammo boxes would give the player's ranged weapon 10% of their ammo back, giving them a chance to keep a streak rolling."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Once a winner is decided or the game timer ends, a UI popin announcing the end of the game will occur and all players' controls will get frozen. The screen will then transition over to a scene of all the players in the game standing in a line clapping, while the victorious player's name will be displayed on the screen, and their character in the front doing a victory-belt animation."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Smash Ops, as a concept, is a very simple and to-the-point kind of game, easy to hop in, play and understand. It was fun to re-invent the way players fight each other in Call of Duty, and gave me another fun opportunity to work on PvP gameplay."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         }
                     ]
                 }
@@ -234,7 +277,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -393,10 +436,168 @@
                         {
                             "type": "youtube",
                             "value": "https://www.youtube.com/embed/jNZ_DUbaCZI"
-                        }   
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        },
+                        {
+                            "type": "text",
+                            "value": "Mindshare was the final episode in a series I had created of Custom Call of Duty Zombies modifications known as \"Nova Six\". This installment acted as a culmination of everything I had learned previously, and I had used it to very much push this engine as hard as I could to create a very fun, unique experience. This mod hosted quite a few new features, as well as massive overhauls on previous features and systems I had included in previous installments."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project was about creating a big, intense finale that would include lots of fun, interesting and challenging features for players who had stuck along for the entire ride. I worked hard to make a consistent, immersive atmosphere with a very \"alive\" background environment, a brand new music system, storytelling and overall environmental feel. I used the existing Call of Duty Zombies map, \"Moon\", as a kickstart for this atmosphere, and it ended up becoming something I'm still very proud of to this day."
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on Mindshare included leading the team, designing & developing the scripts & systems for all of the new gameplay elements, designing & developing the scripts for AI, creating VFX for the new enemies and environment, and tweaking/balancing new weapons and enemies. I lead and worked with a few render artists, graphics designers and QA teams to get a custom UI for the mod, some visual renders to assist in displaying things to players, and receive feedback on functionalities, features and changes." 
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project gave me a big opportunity to completely overhaul all of my previous systems — they weren't that great in previous installments, felt unsatisfying and clunky for the player to use, and were very difficult to maintain. One of the major systems I overhauled was the Gobblegum system — previously, it was only a random number generator with predefined routes to pull an item from the gumball machines, but in this installment the system had been rewritten to be an API-like structure that made it very simple and swift to add new powerups to the gumball machines. Because of this, I was able to jam in quite a few gumball powerups that had not existed in previous iterations."
+                        },
+                        {
+                            "type": "text",
+                            "value": "I was also able to include persistent unlocks — when the player completes Mindshare's quest for the first time, they'll unlock a hidden power weapon, unlocked perk limit and a cash bonus on their next playthrough of the game."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Mindshare is one of the greatest examples of mine of working past an engine's technological limitations to make sure the game still played out the way I wanted it to in my head. There were plenty of first-time things that were executed in this modification that had not yet been done before."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language)"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gameplay Breakdown",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "Mindshare itself is an add-on on top of the existing Call of Duty Zombies mode, so I'll be detailing the individual gameplay features I added on here instead."
+                        },
+                        {
+                            "type": "text",
+                            "value": "To start, I bolted a secondary progression flow onto the map. In a typical Zombies map, you're tasked with opening every door in the map, and activating a central power switch. Instead, I replaced the singular power switch with a system where players have to activate several pylons around the map, also known as \"Solar Engines\" — lore-wise, these existed as engines that would use raw star energy to power things. One of these pylons was located in each of the map's 6 quadrants, and completing each one would turn on the resources and buyable items in each area. This changed how players progressed the map, as they wanted to clear out certain areas before others to activate these resources."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_solar_fp.jpg",
+                            "subtitle": "Special marked zombies in front of a powering-up Solar Engine."
+                        },
+                        {
+                            "type": "text",
+                            "value": "When activating a Solar Engine, players would be tasked with staying near it and eliminating marked Zombies within the pylon's proximity. The Solar Engines would automatically spawn in new zombies with an orange glow attached to them, marking them as the enemies the players need to target. After the Solar Engine has the proper number of Zombies eliminated, the task will be successful, and the Solar Engine will activate the attached resources. The Solar Engines were systemized as well, so it was very easy for me to create new locations for them, assign post-activation functions and flags, and set up spawn points for the special marked zombies. This meant that, while prototyping, I could iterate the design swiftly and each instance would be updated with new functionalities and fixes."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_shop_fp.jpg",
+                            "subtitle": "The Shop offering a special weapon."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Another system I worked on was a \"shop\" system that operated on game rounds. This shop would open up when its associated Solar Engine was activated, and would begin to sell items. The shop offered weapons (some unique to the shop with special abilities), and another new feature called \"trinkets\", which acted as passive abilities players would have until they bled out. The shop offered one item at a time, and could be cycled out by either purchasing the item or progressing the game's rounds by one. This shop was introduced as a way for players to more easily get what they want, have an extra weapon available and also provide some unique items and ideas such as the trinkets and special weapons."
+                        },
+                        {
+                            "type": "text",
+                            "value": "I also introduced a few new types of AI enemies (which I'll go into detail in the next sections), and added a full-length hidden story quest full of puzzles, kill challenges and exploration. A full walkthrough of the hidden story quest is available on the project's download page. The story quest ended with a space-flight boss encounter in a separate map, including a few cutscenes, with one being animated by a fellow developer Luna, and the other being animated by me. I scripted custom scene logic to encapsulate these cutscenes into easily-implementable objects. After this space-flight encounter, which was against the Nomads and the Nomad Battlecruiser, players were dropped into a second, grand finale encounter against the \"Time Eater.\""
+                        }
+                    ]
+                },
+                {
+                    "title": "Challenges: The Nomads",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "One of the major challenges I faced during development is that the primary enemy AI for this mod, the \"Nomads\", were intended to be a vehicle entity that would be able to fly around and navigate. Unfortunately, due to a strict limitation in the game, I learned that you cannot inject vehicles into an already-built map file. As a clever workaround, these AI were instead spawned model entities! I used root motion animation, false-physics mathematics and a couple clever visual tricks to make these enemies give off the vibe that they were a full vehicle entity."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_marduk_fp.jpg",
+                            "subtitle": "A single nomad flying in front of the \"Marduk\" Nomad Battlecruiser."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The thought process of developing these AI were that Zombies, as a core mode, has always had very ground-centric enemies whose only function was to run straight towards the player. I wanted to shake this up, so developing the Nomads was a huge step in the right direction for me. This was one of my earliest instances of making a \"thinking\" AI — these Nomads understood when a player was looking at them, and would target them or perform a dodge move to avoid getting attacked."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Navigation-wise, this AI could not integrate with the game's standard NavVolume and pathfinding system due to the no-vehicle limitation. Instead, I worked around this by creating \"spheres of influence\" — these were sperhical zones that were invisible to players, placed above the player's playable area, and were the places where Nomads \"legally\" had to be in order to attack a player. When a Nomad wanted to target a player, they'd look up every sphere of influence that is currently accessible in the map (defined as an area that players can also access), choose the closest one and move to it. Once the Nomad finishes moving, they will then be allowed to attack their target player."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_nomads_fp.jpg",
+                            "subtitle": "Three nomads attacking the players during a Nomad Round."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The Nomads were intended to be an \"ever-present threat\", so part of the atmosphere building in this mod included squadrons of Nomads flying above the non-playable area, as well as an occassional passing-by \"Marduk\", a very large Nomad Battlecrusier variant, which also acts as the primary final boss. The Nomads themselves would attack every five rounds in-game, and replace the standard zombie rounds with a round where the players fought only Nomad fliers."
+                        }
+                    ]
+                },
+                {
+                    "title": "Challenges: The Time Eater",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "The Time Eater AI was a second big challenge. The advantage I had with the Time Eater is that it existed in a separate, from-scratch map, so I had a lot more freedom, but due to the fact that the Time Eater's assets, and itself, were split into eight parts, I couldn't write the Time Eater as a vehicle either."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_timeeater_title_fp.jpg",
+                            "subtitle": "The Time Eater's intro sequence."
+                        },
+                        {
+                            "type": "text",
+                            "value": "In place of the vehicle entity, the Time Eater had a single \"core\" piece — the head and chest — that would act as the anchor and attachment point for all other parts. To make the Time Eater feel alive and as if it were all one piece, each part was mounted on to the chest piece and plugged into a special system. This system had the animations assigned to each piece of the body with identifiers, and used calls to this system using these identifier keywords to tell each piece of the body to animate with its respective animation. These pieces were very modular, and as a result I was able to design an attack where the Time Eater would detach his arm and send it through \"time\" to smack the player with it."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_timeeater_arm_fp.jpg",
+                            "subtitle": "The Time Eater placing his arm through a portal."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Another limitation of the Time Eater is that one of his attacks was based on slowing the timescale of the server down — which unfortunately, is a mechanic that does not work in multiplayer. Due to this, the Time Eater's time slowdown attack behaves in two different ways — in singleplayer, the server's timescale gets cut in half for ten seconds, but in multiplayer, I worked around this limitation by making the Time Eater move and act twice as fast during this attack, to give off the \"other perspective\" of time being slowed down, while still maintaining the design idea."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_timeeater_clock_fp.jpg",
+                            "subtitle": "The Time Eater slowing down time."
+                        },
+                        {
+                            "type": "text",
+                            "value": "As the fight went on and players did more damage, the bottoms arms of the Time Eater would fall off to show that players are doing some meaningful damage to the enemy. Upon reaching the final phase, the players would be given an adrenaline-pumping power moment where they are given the Fury's Song from the previous installment, but this time powered up and charged up, and must run down a final hallway to strike the Time Eater with the sword, ending in a magnificent, cinematic explosion and marking the end of the series."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mindshare/ms_timeeater_death.jpg",
+                            "subtitle": "The Time Eater dying."
+                        }
+                    ]
+                },
+                {
+                    "title": "Addendum",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "Overall, Mindshare was a very, very fun project to work on, and included a lot of fun new experimentation, pushing an engine to its limits, and working past technological boundaries to create the experience I wanted to make. This project was wonderful to work on, and I consider it one of my best pieces of work."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        }
                     ]
                 }
-            ]
+            ],
+            "url": "https://forum.modme.co/resources/mindshare.3/"
         },
         {
             "name": "codware",
@@ -416,7 +617,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "CODWare was my first attempt at a PvP gamemode in a full-scale playercount (18 players maximum), as well as my first dive into a \"live-service\" approach for a project. This gamemode was what made me fall in love with developing PvP-type games, and also gave me an opportunity to develop a from-scratch gamemode to change Call of Duty into my own experience -- taking the standard PvP gameplay of the game, and spinning it on its head to be a fun, hop-in-and-go party game."
+                            "value": "CODWare was my first attempt at a PvP gamemode in a full-scale playercount (18 players maximum), as well as my first dive into a \"live-service\" approach for a project. This gamemode was what made me fall in love with developing PvP-type games, and also gave me an opportunity to develop a from-scratch gamemode to change Call of Duty into my own experience — taking the standard PvP gameplay of the game, and spinning it on its head to be a fun, hop-in-and-go party game."
                         },
                         {
                             "type": "text",
@@ -486,7 +687,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare 2 is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
+                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
                         },
                         {
                             "type": "outbound-url",
@@ -508,7 +709,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "The first (and unfortunately last) event for CODWare was one themed after my favorite character in gaming \"Dr. Robotnik\" -- this is, of course, a fan project and has no direct affiliation with SEGA. The event, \"Dr. Robotnik's Invasion\", introduced a few new quality-of-life features, as well as five new minigames and three new boss minigames and an update to the atmosphere & environment. I had our level designer build \"audience stands\" into the main arena, which allowed me to add a fake audience of animated robotniks built by Dr. Robotnik -- I can't help but to add a little bit of extra atmosphere!"
+                            "value": "The first (and unfortunately last) event for CODWare was one themed after my favorite character in gaming \"Dr. Robotnik\" — this is, of course, a fan project and has no direct affiliation with SEGA. The event, \"Dr. Robotnik's Invasion\", introduced a few new quality-of-life features, as well as five new minigames and three new boss minigames and an update to the atmosphere & environment. I had our level designer build \"audience stands\" into the main arena, which allowed me to add a fake audience of animated robotniks built by Dr. Robotnik — I can't help but to add a little bit of extra atmosphere!"
                         },
                         {
                             "type": "image",
@@ -530,7 +731,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Once the event concludes, the minigame weighting is returned to normal, and all special event minigames are moved into the regular pool. Arena theming changes back to normal, but leaves behind a small mark of the previous event's theme permanently -- we wanted to give this arena a \"history\" as we pushed more events into the game."
+                            "value": "Once the event concludes, the minigame weighting is returned to normal, and all special event minigames are moved into the regular pool. Arena theming changes back to normal, but leaves behind a small mark of the previous event's theme permanently — we wanted to give this arena a \"history\" as we pushed more events into the game."
                         },
                         {
                             "type": "text",
@@ -553,7 +754,11 @@
             "logoimage":"mojilife-vr-logo.png",
             "type": "web",
             "url": "https://www.mojilifevr.com",
-            "launchdate": "Jan 2018"
+            "launchdate": "Jan 2018",
+            "content": [
+                {
+                }
+            ]
         },
         {
             "name": "mojilife",
@@ -562,7 +767,63 @@
             "logoimage":"mojilife-logo.png",
             "type": "web",
             "url": "https://www.mojiproducts.com",
-            "launchdate": "Dec 2016 - 2020"
+            "launchdate": "Dec 2016 - 2020",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "MojiLife is a web-based direct sales and e-commerce organization. The website offers users the ability to purchase products from the site, and have them shipped to their address. Users can also sign up as Distributors, which users are allowed to order through and enables the Distributor to earn commission back for sales. There are other features offered as well, including group ordering, subscription services, and also has a few outbound API connections for WMS and shipping. The website uses PHP with the Laravel Framework as its backend, and connects to a MySQL database."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project being a live site often has new changes, features, and fixes constantly — while on this site, I was the primary developer with a secondary back-up team (who was an outsourced team that had developed the base of the website), but we approached things with the \"agile\" development scheme. During this project, I held a solo title of \"Full-Stack Developer\", working on both frontend and backend for the site's lifecycle, as well as server maintenance here and there."
+                        },
+                        {
+                            "type": "text",
+                            "value": "On this project, I came in later after the base had been developed and was the first project in my professional career. I learned the concepts of backend and frontend development while active at this job, starting with minimmal experience and ending up where I am now. I was able to learn, and then take a somewhat nonsensical codebase, interpret it, improve upon it and build on to it. I have spent a lot of time replacing existing, previous systems that weren't up to standards, and replacing them with fresh, clean new ones that improved the user experience in terms of readability and loadtime. I also worked with a UI designer to create a \"one-page flow\" for products sales, making checkout for users quick and efficient."
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities included developing new backend systems and functionalities, developing frontend systems, implementing frontend designs, database maintenance and management, and overall maintained the website throughout its lifecycle. I worked closely with UI/UX teams, marketing teams, and even the company head to develop new features and ideas, as well as providing assistance with designing experiences for users and making the website more accessible and appealing to use."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Over the years, I have iterated over features to improve them, and have even replaced large parts of the website, including a from-scratch shopping cart system. I also developed all involved API connections, which included subscriptions to a digital app, 2 different warehouse management services that we have moved between, 4 different shipping API services, and 3 different payment merchants."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Most of these projects were code-designed, developed and implemented on my own. I acted as a solo developer throughout most of this website's lifecycle, only really working with others who were in charge of visual design, UI/UX, and other team members. I also took on tasks of repairing code from the previous developers & team, which in part also had me deciding to re-build parts of the previous work to be easier to maintain in the future."
+                        }
+                    ]
+                },
+                {
+                    "title": "Screenshots",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojilife/ml_homepage.png",
+                            "subtitle": "Homepage."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojilife/ml_cart.png",
+                            "subtitle": "The Cart page from my \"Cart v2\" system developed throughout 2019."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojilife/ml_onepage_fragrance.png",
+                            "subtitle": "\"One-page flow\" for product sales. The selected product will pop-out from the bottom of the related row."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
