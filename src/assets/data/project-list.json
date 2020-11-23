@@ -753,10 +753,66 @@
             "coverimage": "mojilife-vr-cover.jpg",
             "logoimage":"mojilife-vr-logo.png",
             "type": "web",
-            "url": "https://www.mojilifevr.com",
+            "url": "http://www.mojilifevr.com",
             "launchdate": "Jan 2018",
             "content": [
                 {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "MojiLife VR (also known as MojiRelax) was a website project that acted as a \"VR relaxation\" tech initiative to try to reach a casual, novelty part of the tech market. These were a collection of 360-degree videos for use with simplified VR headsets, and were developed for use with the MojiRelax VR shell -- a VR HMD that used a smartphone insert to view these videos."
+                        },
+                        {
+                            "type": "text",
+                            "value": "These videos were intended to be paired up with an active MojiLife AirMoji device. When purchasing a MojiRelax VR HMD, the consumer would receive a sheet that would offer a list of fragrances to pair with each video. Pairing a fragrance with a VR video was intended as a therapeutic relaxation therapy experience, and were lengthy to be a sort of \"sit back and relax\" activity. It needed to be an easily accessible experience for all audiences that were interested -- a very casual, easy approach for trying out the relaxation experience."
+                        },
+                        {
+                            "type": "text",
+                            "value": "On the homepage, users were greeted with a mobile-friendly responsive homepage that would list all of the videos we had to offer, including a recommended one as the main focus. When selecting a video, if on a non-mobile device, users would be greeted with a pop-up that loads the video on an embedded overlay player; if on a mobile device, the user would be directed to a new, independent page with the video player as the entire page. This was to make the experience in swapping into VR mode very quick and easy, and autoplay was enabled on the player to assist in that."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The video player used the A-Frame Javascript Framework to render the VR videos. The controls, popin, and more were all handled by jQuery. Videos were processed via a PhP process backend, and a standard javascript upload functionality from the end user. These were only uploaded by those who managed MojiRelax VR."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this project included developing both the frontend and backend of the website, setting up & deploying the server and database, and maintaining them. I worked with a design team to build several iterations of the site, and supplied them with progress updates and took feedback."
+                        },
+                        {
+                            "type": "text",
+                            "value": "I used the Laravel Framework for the backend, and jQuery and A-Frame for the frontend. I learned the A-Frame framework throughout the entirety of this project, having no knowledge when initially entering, and was developed in a little less than four months. This project was very short-lived, as it was not a viable choice for the company, but I did my best work on it to make sure that while it was in service, it felt nice to use."
+                        }
+                    ]
+                },
+                {
+                    "title": "Screenshots",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_homepage.png",
+                            "subtitle": "MojiRelax Home Page."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_video_list.jpg",
+                            "subtitle": "Video Selection List with our four available videos."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_video_player.png",
+                            "subtitle": "The video player itself."
+                        }
+                    ]
                 }
             ]
         },
@@ -783,6 +839,10 @@
                         {
                             "type": "text",
                             "value": "On this project, I came in later after the base had been developed and was the first project in my professional career. I learned the concepts of backend and frontend development while active at this job, starting with minimmal experience and ending up where I am now. I was able to learn, and then take a somewhat nonsensical codebase, interpret it, improve upon it and build on to it. I have spent a lot of time replacing existing, previous systems that weren't up to standards, and replacing them with fresh, clean new ones that improved the user experience in terms of readability and loadtime. I also worked with a UI designer to create a \"one-page flow\" for products sales, making checkout for users quick and efficient."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
                         }
                     ]
                 },
