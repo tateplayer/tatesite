@@ -631,6 +631,10 @@
                         {
                             "type": "text",
                             "value": "My responsibilities on this project included designing the gamemode from conception to the final product, scripting the gamemode and systems, and directing the level designer on the requirements for the arenas and minigames."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This was my first pass experimenting with making expandable systems, as well as my first attempt at making a totally new gamemode for Call of Duty. I also worked past lots of technical limitations of this game when developing the \"Dr. Robotnik's Invasion\" event update, which is detailed in the \"Live Service\" section below."
                         }
                     ]
                 },
@@ -714,7 +718,7 @@
                         {
                             "type": "image",
                             "value": "/static/projects/codware/cw_robotnik_battle_fp.jpg",
-                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
+                            "subtitle": "\"Dr. Robotnik\" boss battle."
                         },
                         {
                             "type": "text",
@@ -723,11 +727,11 @@
                         {
                             "type": "image",
                             "value": "/static/projects/codware/cw_robotnik_update_fp.jpg",
-                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
+                            "subtitle": "\"Metal Sonic\" boss battle."
                         },
                         {
                             "type": "text",
-                            "value": "These games also gave me an opportunity to introduce a new type of minigame: a competitive co-op minigame. In these minigames, every player would be pit up against a common enemy. Players who did the most damage to this common enemy would earn bonus points, and players who survived at all would qualify for points. Perma-death occurs during these games, so if all players die, everyone fails and nobody will earn any points, even if someone makes the most damage."
+                            "value": "These games also gave me an opportunity to introduce a new type of minigame: a competitive co-op minigame. In these minigames, every player would be pit up against a common enemy. Players who did the most damage to this common enemy would earn bonus points, and players who survived at all would qualify for points. Perma-death occurs during these games, so if all players die, everyone fails and nobody will earn any points, even if someone outputs the most damage."
                         },
                         {
                             "type": "text",
