@@ -9,7 +9,7 @@
         </div>
         <div>
           <h2 class="font-roboto-thin text-white home-info-job-titles">
-            Full-Stack Web Developer // Gameplay Designer // Systems Designer
+            Full-Stack Web Developer // Gameplay Designer
           </h2>
         </div>
         <div class="home-info-divider"></div>
