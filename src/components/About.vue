@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="about-links-container">
-                <a href="/static/about/tate-player-resume-2020.pdf"><button class="about-link-button">Resume Document</button></a>
+                <a href="/static/about/tateplayer-resume-2020.pdf"><button class="about-link-button">Resume Document</button></a>
                 <router-link to="/projects" tag="button" class="about-link-button">Portfolio</router-link>
             </div>
         </div>
