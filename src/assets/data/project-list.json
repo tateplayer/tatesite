@@ -4,7 +4,7 @@
             "name": "tba-1",
             "title": "TBA",
             "coverimage":"plague-cover.png",
-            "hidden": false,
+            "hidden": true,
             "type": "game",
             "launchdate": "2021"
         },
