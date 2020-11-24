@@ -125,7 +125,18 @@
             "title": "Extinction: Ground War",
             "logoimage":"ground-war-logo.png",
             "type": "game",
-            "launchdate": "Incomplete - 2020"
+            "launchdate": "Incomplete - 2020",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "Extinction: Ground War was an experimental project that involved introducing RTS-style gameplay into a PvP FPS environment."
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "smash",
