@@ -4,6 +4,8 @@ import Router from 'vue-router'
 // VIEWS
 import Home from '@/components/Home'
 import Projects from '@/components/Projects'
+import About from '@/components/About'
+import Contact from '@/components/Contact'
 
 // PROJECT VIEWS
 import projectView from '@/components/projects/layout'
@@ -22,7 +24,17 @@ var router = new Router({
       name: "projects",
       component: Projects
     },
-    /* personal projects */
+    {
+      path: "/about",
+      name: "about",
+      component: About
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact
+    },
+    /* project layout */
     {
       path: "/projects/:name",
       name: "project-view",

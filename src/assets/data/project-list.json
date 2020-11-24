@@ -622,6 +622,10 @@
                         {
                             "type": "text",
                             "value": "This gamemode initially started as a remake of the \"TF2Ware\" custom gamemode in Call of Duty, but eventually evolved into something more, adding new features, new minigames, and evolving past being only a remake. I introduced customization options, pre-game lobbies, unique new minigame ideas, and even took advantage of existing Call of Duty mechanics to create these minigames, such as wallrunning and jetpacks."
+                        },
+                        {
+                            "type": "text",
+                            "value": "CODWare had my largest overall community outreach, clocking in at almost 30,000 unique downloads (29,756 to be precise!)"
                         }
                     ]
                 },

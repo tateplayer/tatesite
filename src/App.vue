@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     updateHeaderStyles: function () {
-      if (this.$route.name !== "home") {
+      if (this.$route.name !== "home" && this.$route.name !== "about") {
         this.navTitleStyle.opacity = 100
         this.navTitleStyle.maxWidth = "300px"
       } else {

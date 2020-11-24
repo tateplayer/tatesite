@@ -46,14 +46,6 @@ export default {
 </script>
 
 <style>
-  .font-roboto-thin {
-    font-family:"Roboto";
-    font-weight:200;
-  }
-  .text-white {
-    color:white;
-  }
-
   .home-wrapper {
     width:100%;
     height:100vh;

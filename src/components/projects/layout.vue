@@ -6,14 +6,14 @@
       </div>
       <div class="project-title-wrapper">
         <div class="project-title-wrapper-inner">
-          <h2 class="main-navigation-title">{{ project_details.title }}</h2>
+          <h2 class="font-roboto-thin text-white textbig">{{ project_details.title }}</h2>
         </div>
         <!--<div class="project-title-underline"></div>-->
       </div>
       <div class="project-section" v-for="content in project_details.content" v-bind:key="content.title">
         <div class="section-title">
           <div class="section-title-inner">
-            <h2 class="main-navigation-title">{{ content.title }}</h2>
+            <h2 class="font-roboto-thin text-white textbig">{{ content.title }}</h2>
           </div>
         </div>
         <div v-for="(value, index) in content.values" v-bind:key="index" class="section-container">
@@ -139,19 +139,6 @@ export default {
     background-color:rgb( 10, 10, 10 );
     align-items:center;
     width:50%;
-  }
-  .section-container {
-    width:80%;
-    margin:0 auto;
-    padding-top:20px;
-  }
-  .section-container > p {
-    font-family:"Roboto";
-    font-weight:200;
-    font-size:18px;
-    color:white;
-    text-indent:5%;
-    margin:0;
   }
   .section-project-image {
     font-size:0;
