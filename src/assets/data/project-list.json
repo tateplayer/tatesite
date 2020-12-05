@@ -124,6 +124,7 @@
             "name": "alienvs",
             "title": "Extinction: Ground War",
             "logoimage":"ground-war-logo.png",
+            "coverimage": "alienvs-cover.jpg",
             "type": "game",
             "launchdate": "Incomplete - 2020",
             "content": [
