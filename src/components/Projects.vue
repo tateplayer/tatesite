@@ -3,7 +3,7 @@
     <div class="project-list-section">
       <div class="project-list-label">
         <div v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'28px', delay:'100'}" class="project-list-label-title">
-          PROFESSIONAL PROJECTS
+          PORTFOLIO & PROJECTS
         </div>
         <div class="project-list-label-chaser">
           <div>
@@ -11,21 +11,7 @@
         </div>
       </div>
       <div class="project-list">
-        <projectListItem v-for="project in projects.pro" v-bind:key="project.name" v-bind="project"></projectListItem>
-      </div>
-    </div>
-    <div class="project-list-section">
-      <div class="project-list-label">
-        <div v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'28px', delay:'100'}" class="project-list-label-title">
-          PERSONAL PROJECTS
-        </div>
-        <div class="project-list-label-chaser">
-          <div>
-          </div>
-        </div>
-      </div>
-      <div class="project-list">
-        <projectListItem v-for="project in projects.personal" v-bind:key="project.name" v-bind="project"></projectListItem>
+        <projectListItem v-for="project in projects" v-bind:key="project.name" v-bind="project"></projectListItem>
       </div>
     </div>
   </div>
@@ -46,10 +32,7 @@ export default {
   },
   data: function () {
     return {
-      projects: {
-        personal: projectListData.personal,
-        pro: projectListData.pro
-      }
+      projects: projectListData.projects
     }
   },
   mounted: function () {

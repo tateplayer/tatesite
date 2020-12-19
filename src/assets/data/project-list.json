@@ -1,10 +1,10 @@
 {
-    "personal": [
+    "projects": [
         {
             "name": "tba-1",
-            "title": "TBA",
+            "title": "Unnanounced Project",
             "coverimage":"plague-cover.png",
-            "hidden": true,
+            "hidden": false,
             "type": "game",
             "launchdate": "2021"
         },
@@ -28,7 +28,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "CODWare 2 was a complete from-scratch remake of CODWare 1. It was built to be a nice, smooth experience compared to the original version, allowing the rest of the team and I to showcase how our abilities have improved since the first installment. It also introduced several new minigames, updates to old ones, and new features like persistent player progression. For a referesher, CODWare is a gamemode where players are all in the same arena and will compete in several back-to-back minigames, each of which increases in speed as the match goes on, until the players must all face a major minigame at the end known as a \"Boss Round\". These minigames would rewards the players with points, and the player with the most points at the end of the game was declared the victor."
+                            "value": "CODWare 2 was a complete from-scratch remake of CODWare 1. It was built to be a nice, smooth experience compared to the original version, allowing the rest of the team and I to showcase how our abilities have improved since the first installment. It also introduced several new minigames, updates to old ones, and an attempt at persistent progression -- keeping track of the winner from the previous match into the next one. For a refresher, CODWare is a gamemode where players are all in the same arena and will compete in several back-to-back minigames, each of which increases in speed as the match goes on, until the players must all face a major minigame at the end known as a \"Boss Round\". These minigames would rewards the players with points, and the player with the most points at the end of the game was declared the victor."
                         },
                         {
                             "type": "text",
@@ -133,7 +133,117 @@
                     "values": [
                         {
                             "type": "text",
-                            "value": "Extinction: Ground War was an experimental project that involved introducing RTS-style gameplay into a PvP FPS environment."
+                            "value": "Extinction: Ground War was an experimental project for Call of Duty: Black Ops 3 that involved introducing RTS-style gameplay into a PvP FPS environment. First and foremost, it was developed to be a gameplay experiment -- an attempt at combining two different gameplay ideals into one to create a new experience. This mode was birthed from my fascination with the Call of Duty: Ghosts \"Extinction\" Gamemode -- it was a fun, short-lived coop game developed by Infinity Ward. Ground War initially started as a \"port\" of the Extinction gamemode to Call of Duty: Black Ops 3, but as I wanted to learn more concepts and innovate, evolved into its own gamemode simply using the Aliens from the original Extinction mode as the face. The gameplay mechanics such as structure building and unit control were inspired by one of my favorite childhood games, \"Starcraft\"."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The project featured several new types of systems, including things like creating structures and bases, queuing unit spawns, commanding and directing units, and collecting resources. All systems in this new project assisted me in refining previous system development, including creating a nice pipeline for introducing new AI and Structures into their respective systems, wrapper functions and utility functions to make required data quick and accessible."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Unfortunately, this project has been put on hold due to an inescapable engine limit in Call of Duty: Black Ops 3 -- the engine has a hard limit of 64 active AI at a time, and my sketchup for this project involved each player having a large army to do battle with. I still have future plans to revisit this in a different PvP fashion, but I still want to share some of the fun systems made on this project."
+                        },
+                        {
+                            "type": "text",
+                            "value": "A project breakdown is available below."
+                        }
+                    ]
+                },
+                {
+                    "title": "Gameplay Breakdown",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "In Extinction: Ground War, the player's primary objective is to eliminate all players -- a classic \"last man standing approach\" -- however, there is more to it than just eliminating the other player. As long as a player still has living units, that player will respawn upon death. Players are only fully eliminated if their entire army is wiped out along with them. Each player's aliens and structures would have a color that identifies what player they belong to, so that opposing players can tell which enemy belongs to which enemy player. The maps are designed to be symmetrical, with small sections where players can explore to find neutral enemies and set up more bases."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Each player would start with a main structure known as the \"Hatchery\", and three friendly units called \"Scouts\". From this point, players are tasked with creating a bigger army -- they need to expand their base by building more structures, and creating more and more units; these things would require you to spend a currency called \"DNA\". To inspire exploration and engagement, this currency was gained by defeating \"neutral aliens\" that spawn in certain areas."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-hatchery-starters.jpg",
+                            "subtitle": "Hatchery with three player Scouts in front"
+                        },
+                        {
+                            "type": "text",
+                            "value": "Neutral alien spawn areas are separate zones that will spawn neutral aliens as long as players, or their units, are inside of that zone. To prevent a dull loop, or camping, surviving in these zones will get harder and harder the longer the player stays in there -- neutral aliens will spawn more and more often. This rate will reset once the player leaves the area -- this is to get players to want to return to their base, amass their army bigger and work on their structures rather than sitting in one place. Each zone's rate is independent to that zone, so a player in one zone will not affect the spawn rate of a player in another zone."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-neutral-aliens.jpg",
+                            "subtitle": "Neutral Aliens pursuing a player"
+                        },
+                        {
+                            "type": "text",
+                            "value": "Defeating an alien, whether neutral or player-owned, will reward the player with DNA points based on what enemy type it was -- for instance, Scouts will reward the player with 25 DNA. The player will still earn the DNA whether or not they defeat the enemy directly with their gun, or using one of their units. This DNA, in turn, can be used to create structures and more units. These will cost different amounts of DNA depending on what kind of unit they are -- for example, a Scout will cost the player 50 units to produce."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-alien-battle.jpg",
+                            "subtitle": "Red Player's aliens fighting a group of Neutral Aliens"
+                        },
+                        {
+                            "type": "text",
+                            "value": "When creating structures and units, players will have to wait for them to be produced. During this state, these objects are more vulnerable to damage and easy to destroy. Once this time has passed, the structure or unit will have its full health pool and become usable or commandable. To incentivize base expansion, players are limited on how many units they can create -- initially, this limit is at 15, but if you build a certain type of structure called a \"Hive Colony\", this limit will be increased by 5. It is important to build several of these structures to expand the size of your army, meaning it was important to take areas to create a larger base. It was intended that, different types of structures would enable the player to create different types of units. Structures are created using a special tool that all players are equipped with called the \"Cortex Replicant\"."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-egg-progress.jpg",
+                            "subtitle": "Red Player's aliens being produced in placeholder \"Egg\" props. In the top left, the player is shown to have 12 out of 30 total allowed units."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-structure-tool.jpg",
+                            "subtitle": "Holding out the Structure Tool to build a Hive Colony"
+                        },
+                        {
+                            "type": "text",
+                            "value": "Once a player runs out of units and is eliminated by another player or player's unit, they will be eliminated from the game permanently, and cannot respawn. When all players but one are eliminated, the final surviving player will be declared the victor, and the game will end, returning all the players back to the lobby."
+                        }
+                    ]
+                },
+                {
+                    "title": "Unit States",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "Units are the primary part of Ground War, and as a result, are the most complex. Units can be manually commanded by the players if they wish, otherwise they will automatically patrol the area they spawned at and will attack any threats that come close to their patrol area. The player that owns a unit can select a unit by pressing their Action button while aiming at unit while in hipfire -- this will ping a location, and select all of the units within a radius, adding a red selection marker above the unit. If a player pings a location without any units in it, they will deselect all of these units; but if they ping an area with units in it, it will add these new units to their already selected group, allowing players to control up to 32 units at a time. If a player pings while aiming down their weapon's sights, it acts as a way to command a unit to go to a destination. The unit will go to this destination unless interrupted by an attack or are told to go to another destination by the player."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/alienvs/alienvs-units-selected.jpg",
+                            "subtitle": "Red Player having selected several of their units."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Units can bet set to several different \"think\" modes, allowing players to set units to fulfill certain roles in the battlefield. These modes can be switched by pressing the Action Slot buttons on the player's keybinds, or the D-Pad on a controller. The modes available are as follows:"
+                        },
+                        {
+                            "type": "text",
+                            "value": "Idle: The unit will stay where they are and will fight against any threats nearby."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Patrol: The unit will patrol the local area and fight against any threats that come within its patrol area."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Follow: The unit will follow the commanding player and fight any threats that come near the unit or the player. Acts as a \"protection\" mode."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Passive: The unit will remain still and not attack any enemies, and will always move to the commanding player's marker. This mode is useful for getting a unit to leave a fight that they are losing."
+                        }
+                    ]
+                },
+                {
+                    "title": "Addendum",
+                    "values": 
+                    [
+                        {
+                            "type": "text",
+                            "value": "Ground War was a very fun experience -- I got to play with a lot of new ideas, all very unique compared to what I've made before. While it didn't quite finish the way I wanted it to, it ended up being a wonderful learning experience on dessign iteration, starting from a coop mode to a PvP mode, and also iterating on improving features to be more user-friendly from feedback. I hope to eventually be able to realize this mode into a finished project, but for now I am happy to share what I have developed while working on it."
                         }
                     ]
                 }
@@ -161,11 +271,11 @@
                         },
                         {
                             "type": "text",
-                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. This gamemode was a more direct PvP approach — players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
+                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. In taking a more direct approach, players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
                         },
                         {
                             "type": "text",
-                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. Smash Ops only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. The download was split up into pieces, one being the actual gamemode module, the rest being the stages. This way, it was super easy to choose the gamemode from the menu and hop into a map, also enabling for swifter integration and allowing players to only download the maps they actively wanted to play."
+                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. By design, this gamemode only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. The download was split up into pieces, one being the actual gamemode module, the rest being the stages. This way, it was super easy to choose the gamemode from the menu and hop into a map, also enabling for swifter integration and allowing players to only download the maps they actively wanted to play."
                         },
                         {
                             "type": "text",
@@ -208,7 +318,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Building off of Black Ops 3's built-in \"specialist characters\", I assigned loadouts to each character. Players will choose a character based on their loadout, will always spawn in with that loadout, and cannot pick up weapons from fallen enemies. Each character is assigned a primary ranged weapon, and a secondary melee weapon, and a few are also assigned grenades or explosives to make up for weaker primary weapons. On the UI, the player can see their own current knockback value, as well as a portrait of who they are playing as. We were able to work around cluttering the screen with other players' knockback values by adding the most recently attacked opponent's knockback value beneath the player's crosshair."
+                            "value": "Building off of Black Ops 3's built-in \"specialist characters\", I assigned loadouts to each character. Players will choose a character based on their loadout, will always spawn with it, and cannot pick up weapons from fallen enemies. Each character is assigned a primary ranged weapon, and a secondary melee weapon, and a few are also assigned grenades or explosives to make up for weaker primary weapons. On the UI, the player can see their own current knockback value, as well as a portrait of who they are playing as. We were able to work around cluttering the screen with other players' knockback values by adding the most recently attacked opponent's knockback value beneath the player's crosshair."
                         },
                         {
                             "type": "image",
@@ -264,7 +374,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided to start I would create new ways to experience battles against some of my favorite characters from the games — having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
+                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided I would create new ways to experience battles against some of my favorite characters from the games — having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
                         },
                         {
                             "type": "text",
@@ -338,7 +448,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to constantly be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed — this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
+                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed — this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
                         },
                         {
                             "type": "text",
@@ -433,6 +543,75 @@
             ],
             "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1532706684",
             "launchdate": "Oct 2018"
+        },
+        {
+            "name": "mojivr",
+            "title": "MojiLife VR",
+            "coverimage": "mojilife-vr-cover.jpg",
+            "logoimage":"mojilife-vr-logo.png",
+            "type": "web",
+            "url": "http://www.mojilifevr.com",
+            "launchdate": "Jan 2018",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "MojiLife VR (also known as MojiRelax) was a website project that acted as a \"VR relaxation\" tech initiative to try to reach a casual, novelty part of the tech market. These were a collection of 360-degree videos for use with simplified VR headsets, and were developed for use with the MojiRelax VR shell -- a VR HMD that used a smartphone insert to view these videos."
+                        },
+                        {
+                            "type": "text",
+                            "value": "These videos were intended to be paired up with an active MojiLife AirMoji device. When purchasing a MojiRelax VR HMD, the consumer would receive a sheet that would offer a list of fragrances to pair with each video. Pairing a fragrance with a VR video was intended as a therapeutic relaxation therapy experience, and were lengthy to be a sort of \"sit back and relax\" activity. It needed to be an easily accessible experience for all audiences that were interested -- a very casual, easy approach for trying out the relaxation experience."
+                        },
+                        {
+                            "type": "text",
+                            "value": "On the homepage, users were greeted with a mobile-friendly responsive homepage that would list all of the videos we had to offer, including a recommended one as the main focus. When selecting a video, if on a non-mobile device, users would be greeted with a pop-up that loads the video on an embedded overlay player; if on a mobile device, the user would be directed to a new, independent page with the video player as the entire page. This was to make the experience in swapping into VR mode very quick and easy, and autoplay was enabled on the player to assist in that."
+                        },
+                        {
+                            "type": "text",
+                            "value": "The video player used the A-Frame Javascript Framework to render the VR videos. The controls, popin, and more were all handled by jQuery. Videos were processed via a PhP process backend, and a standard javascript upload functionality from the end user. These were only uploaded by those who managed MojiRelax VR."
+                        },
+                        {
+                            "type": "outbound-url",
+                            "value": "Visit Project"
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this project included developing both the frontend and backend of the website, setting up & deploying the server and database, and maintaining them. I worked with a design team to build several iterations of the site, and supplied them with progress updates and took feedback."
+                        },
+                        {
+                            "type": "text",
+                            "value": "I used the Laravel Framework for the backend, and jQuery and A-Frame for the frontend. I learned the A-Frame framework throughout the entirety of this project, having no knowledge when initially entering, and was developed in a little less than four months. This project was very short-lived, as it was not a viable choice for the company, but I did my best work on it to make sure that while it was in service, it felt nice to use."
+                        }
+                    ]
+                },
+                {
+                    "title": "Screenshots",
+                    "values": [
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_homepage.png",
+                            "subtitle": "MojiRelax Home Page."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_video_list.jpg",
+                            "subtitle": "Video Selection List with our four available videos."
+                        },
+                        {
+                            "type": "image",
+                            "value": "/static/projects/mojirelax/mr_video_player.png",
+                            "subtitle": "The video player itself."
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "mindshare",
@@ -760,77 +939,6 @@
                         {
                             "type": "outbound-url",
                             "value": "Visit Project"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "pro": [
-        {
-            "name": "mojivr",
-            "title": "MojiLife VR",
-            "coverimage": "mojilife-vr-cover.jpg",
-            "logoimage":"mojilife-vr-logo.png",
-            "type": "web",
-            "url": "http://www.mojilifevr.com",
-            "launchdate": "Jan 2018",
-            "content": [
-                {
-                    "title": "Project Information",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "MojiLife VR (also known as MojiRelax) was a website project that acted as a \"VR relaxation\" tech initiative to try to reach a casual, novelty part of the tech market. These were a collection of 360-degree videos for use with simplified VR headsets, and were developed for use with the MojiRelax VR shell -- a VR HMD that used a smartphone insert to view these videos."
-                        },
-                        {
-                            "type": "text",
-                            "value": "These videos were intended to be paired up with an active MojiLife AirMoji device. When purchasing a MojiRelax VR HMD, the consumer would receive a sheet that would offer a list of fragrances to pair with each video. Pairing a fragrance with a VR video was intended as a therapeutic relaxation therapy experience, and were lengthy to be a sort of \"sit back and relax\" activity. It needed to be an easily accessible experience for all audiences that were interested -- a very casual, easy approach for trying out the relaxation experience."
-                        },
-                        {
-                            "type": "text",
-                            "value": "On the homepage, users were greeted with a mobile-friendly responsive homepage that would list all of the videos we had to offer, including a recommended one as the main focus. When selecting a video, if on a non-mobile device, users would be greeted with a pop-up that loads the video on an embedded overlay player; if on a mobile device, the user would be directed to a new, independent page with the video player as the entire page. This was to make the experience in swapping into VR mode very quick and easy, and autoplay was enabled on the player to assist in that."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The video player used the A-Frame Javascript Framework to render the VR videos. The controls, popin, and more were all handled by jQuery. Videos were processed via a PhP process backend, and a standard javascript upload functionality from the end user. These were only uploaded by those who managed MojiRelax VR."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
-                    ]
-                },
-                {
-                    "title": "Responsibilities",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included developing both the frontend and backend of the website, setting up & deploying the server and database, and maintaining them. I worked with a design team to build several iterations of the site, and supplied them with progress updates and took feedback."
-                        },
-                        {
-                            "type": "text",
-                            "value": "I used the Laravel Framework for the backend, and jQuery and A-Frame for the frontend. I learned the A-Frame framework throughout the entirety of this project, having no knowledge when initially entering, and was developed in a little less than four months. This project was very short-lived, as it was not a viable choice for the company, but I did my best work on it to make sure that while it was in service, it felt nice to use."
-                        }
-                    ]
-                },
-                {
-                    "title": "Screenshots",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_homepage.png",
-                            "subtitle": "MojiRelax Home Page."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_video_list.jpg",
-                            "subtitle": "Video Selection List with our four available videos."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_video_player.png",
-                            "subtitle": "The video player itself."
                         }
                     ]
                 }
