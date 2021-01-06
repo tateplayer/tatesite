@@ -20,7 +20,7 @@
         </div>
         <div class="home-info-button-container">
           <router-link :to="{ name: 'projects' }" tag="button" class="home-info-button">
-            View My Portfolio
+            View Portfolio
           </router-link>
         </div>
       </div>

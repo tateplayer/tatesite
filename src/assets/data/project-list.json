@@ -3,10 +3,38 @@
         {
             "name": "tba-1",
             "title": "Unnanounced Project",
-            "coverimage":"plague-cover.png",
+            "coverimage":"tba-icebreaker-cover.jpg",
             "hidden": false,
             "type": "game",
-            "launchdate": "2021"
+            "launchdate": "2021",
+            "content": [
+                {
+                    "title": "Project Information",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "TBA is an unannounced project currently in progress that focuses to be an entire new \"expansion\" to Call of Duty: Black Ops 3. This expansion will be a standalone co-op gamemode, with a target of 4-6 players per a match. It will feature several new concepts that have yet to be explored in modding, and is developed with an internal API that will be usable by other users to enable us to promote custom maps for this expansion in the future."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project will include ground-up, never before seen AI that will challenge how players think and play this game, and will also include lots of variety for the standardized enemy types to provide a comfortable gameplay mix-up and keep things fresh. The intention is to create something that is new and different, with lots of options that will provide players that have an itch to keep playing to try new ways to play and experiment. It will be accessible, but still challenging -- players may have to fail a level a few times before they can truly understand how to succeed if they're new to the game."
+                        },
+                        {
+                            "type": "text",
+                            "value": "TBA is being developed by a team of four people, and will include brand new maps, a new weapon arsenal, new enemies, its own soundtrack, and lots of unique features all scripted from-scratch specifically for this expansion."
+                        }
+                    ]
+                },
+                {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on this expansion include leading & directing the project from inception, developing & maintaining all gameplay script and code, developing all UI script and code, developing all of the AI behavior, and prototyping level design. I am currently working with a full team of Level Designers, Modelers, Animators, Audio Engineers and Graphics Designers."
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "codware-2",
@@ -126,7 +154,7 @@
             "logoimage":"ground-war-logo.png",
             "coverimage": "alienvs-cover.jpg",
             "type": "game",
-            "launchdate": "Incomplete - 2020",
+            "launchdate": "2020",
             "content": [
                 {
                     "title": "Project Information",
@@ -150,11 +178,28 @@
                     ]
                 },
                 {
+                    "title": "Responsibilities",
+                    "values": [
+                        {
+                            "type": "text",
+                            "value": "My responsibilities on Extinction: Ground War involved designing & scripting the overall gameplay & systems, making initial level blockouts, designing AI enemy behavior, and working with a UI designer and a UI programmer."
+                        },
+                        {
+                            "type": "text",
+                            "value": "This project was an attempt at making new ways for players to interact with the world and environment. It was a great learning experience on how to twist the rules of the existing genre down to how players look around and explore."
+                        },
+                        {
+                            "type": "text",
+                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language)"
+                        }
+                    ]
+                },
+                {
                     "title": "Gameplay Breakdown",
                     "values": [
                         {
                             "type": "text",
-                            "value": "In Extinction: Ground War, the player's primary objective is to eliminate all players -- a classic \"last man standing approach\" -- however, there is more to it than just eliminating the other player. As long as a player still has living units, that player will respawn upon death. Players are only fully eliminated if their entire army is wiped out along with them. Each player's aliens and structures would have a color that identifies what player they belong to, so that opposing players can tell which enemy belongs to which enemy player. The maps are designed to be symmetrical, with small sections where players can explore to find neutral enemies and set up more bases."
+                            "value": "In Extinction: Ground War, the player's primary objective is to eliminate all players -- a classic \"last man standing approach\" -- however, there is more to it than just eliminating the other player. As long as a player still has living units, that player will respawn upon death. Players are only fully eliminated if their entire army is wiped out along with them. Each player's aliens and structures would have a unique color identifier, so that opposing players can tell which enemy belongs to which enemy player. The maps are designed to be symmetrical, with small sections where players can explore to find neutral enemies and set up more bases."
                         },
                         {
                             "type": "text",
@@ -208,7 +253,7 @@
                     "values": [
                         {
                             "type": "text",
-                            "value": "Units are the primary part of Ground War, and as a result, are the most complex. Units can be manually commanded by the players if they wish, otherwise they will automatically patrol the area they spawned at and will attack any threats that come close to their patrol area. The player that owns a unit can select a unit by pressing their Action button while aiming at unit while in hipfire -- this will ping a location, and select all of the units within a radius, adding a red selection marker above the unit. If a player pings a location without any units in it, they will deselect all of these units; but if they ping an area with units in it, it will add these new units to their already selected group, allowing players to control up to 32 units at a time. If a player pings while aiming down their weapon's sights, it acts as a way to command a unit to go to a destination. The unit will go to this destination unless interrupted by an attack or are told to go to another destination by the player."
+                            "value": "Units are the primary part of Ground War, and as a result, are the most complex. Units can be manually commanded by the players if they wish, otherwise they will automatically patrol the area they spawned at and will attack any threats that come close to their patrol area. The player that owns a unit can select it by pressing their Action button while aiming at unit while in hipfire -- this will ping a location, and select all of the units within a radius, adding a red selection marker above the unit. If a player pings a location without any units in the area, the user will automatically deselect all previously selected units; but if they ping an area with units in it, the units will be added to their already selected group, allowing players to control up to 32 units at a time. If a player pings while aiming down their weapon's sights, it acts as a way to command a unit to go to a destination. The unit will go to this destination unless interrupted by an attack or are told to advance to a different location by the player."
                         },
                         {
                             "type": "image",
@@ -217,7 +262,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Units can bet set to several different \"think\" modes, allowing players to set units to fulfill certain roles in the battlefield. These modes can be switched by pressing the Action Slot buttons on the player's keybinds, or the D-Pad on a controller. The modes available are as follows:"
+                            "value": "Units can be set to several different \"think\" modes, allowing players to set units to fulfill certain roles in the battlefield. These modes can be switched by pressing the Action Slot buttons on the player's keybinds, or the D-Pad on a controller. The modes available are as follows:"
                         },
                         {
                             "type": "text",
@@ -243,7 +288,7 @@
                     [
                         {
                             "type": "text",
-                            "value": "Ground War was a very fun experience -- I got to play with a lot of new ideas, all very unique compared to what I've made before. While it didn't quite finish the way I wanted it to, it ended up being a wonderful learning experience on dessign iteration, starting from a coop mode to a PvP mode, and also iterating on improving features to be more user-friendly from feedback. I hope to eventually be able to realize this mode into a finished project, but for now I am happy to share what I have developed while working on it."
+                            "value": "Ground War was a very fun experience -- I got to play with a lot of new ideas, all very unique compared to what I've made before. While it didn't quite finish the way I wanted it to, it ended up being a wonderful learning experience on design iteration, starting from a coop mode to a PvP mode, and also iterating on improving features to be more user-friendly from feedback. I hope to eventually be able to realize this mode into a finished project, but for now I am happy to share what I have developed while working on it."
                         }
                     ]
                 }
