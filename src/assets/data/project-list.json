@@ -641,7 +641,7 @@
                     "values": [
                         {
                             "type": "image",
-                            "value": "/static/projects/mojirelax/mr_homepage.png",
+                            "value": "/static/projects/mojirelax/mr_homepage.jpg",
                             "subtitle": "MojiRelax Home Page."
                         },
                         {
@@ -651,7 +651,7 @@
                         },
                         {
                             "type": "image",
-                            "value": "/static/projects/mojirelax/mr_video_player.png",
+                            "value": "/static/projects/mojirelax/mr_video_player.jpg",
                             "subtitle": "The video player itself."
                         }
                     ]
@@ -1041,17 +1041,17 @@
                     "values": [
                         {
                             "type": "image",
-                            "value": "/static/projects/mojilife/ml_homepage.png",
+                            "value": "/static/projects/mojilife/ml_homepage.jpg",
                             "subtitle": "Homepage."
                         },
                         {
                             "type": "image",
-                            "value": "/static/projects/mojilife/ml_cart.png",
+                            "value": "/static/projects/mojilife/ml_cart.jpg",
                             "subtitle": "The Cart page from my \"Cart v2\" system developed throughout 2019."
                         },
                         {
                             "type": "image",
-                            "value": "/static/projects/mojilife/ml_onepage_fragrance.png",
+                            "value": "/static/projects/mojilife/ml_onepage_fragrance.jpg",
                             "subtitle": "\"One-page flow\" for product sales. The selected product will pop-out from the bottom of the related row."
                         }
                     ]
