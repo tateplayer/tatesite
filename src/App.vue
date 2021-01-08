@@ -31,6 +31,10 @@
     <transition name="loader-fade">
       <router-view/>
     </transition>
+    <div id="footer">
+      <p class="font-roboto-thin text-white">&#169;Tate Player 2020.</p>
+      <p class="font-roboto-thin text-white">All trademarked content is property of their original owners.</p>
+    </div>
   </div>
 </template>
 
@@ -112,5 +116,13 @@ export default {
   }
   .loading-overlay-manager-enter > .loading-overlay-bg, .loading-overlay-manager-leave-active > .loading-overlay-bg {
     opacity:0;
+  }
+  #footer {
+    text-align:center;
+    padding:10px;
+  }
+  #footer > p {
+    padding:5px;
+    margin:0;
   }
 </style>
