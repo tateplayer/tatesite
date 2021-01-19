@@ -1,5 +1,10 @@
 <template>
   <div class="home-wrapper">
+    <div class="home-video-bg">
+      <div class="home-video-control-blocker">
+      </div>
+      <iframe width="1920px" height="1080px" src="https://www.youtube.com/embed/io_geMEyhek?autoplay=1&vq=hd1080&mute=1&controls=0&loop=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+    </div>
     <div class="home-info-column">
       <div class="home-info-box" v-bind:style="homeBoxStyles">
         <div>
@@ -9,7 +14,7 @@
         </div>
         <div>
           <h2 class="font-roboto-thin text-white home-info-job-titles">
-            Full-Stack Web Developer // Gameplay Designer
+            Full-Stack Web Developer // Gameplay Designer // Technical Designer
           </h2>
         </div>
         <div class="home-info-divider"></div>
@@ -47,11 +52,26 @@ export default {
 
 <style>
   .home-wrapper {
+    position:relative;
     width:100%;
     height:100vh;
-    background-image:url("/static/homepage-bg.png");
     background-size:cover;
     background-position:center center;
+  }
+  .home-video-bg {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+  }
+  .home-video-control-blocker {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
   }
   .home-info-column {
     display:flex;
