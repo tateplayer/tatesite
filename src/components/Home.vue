@@ -3,7 +3,7 @@
     <div class="home-video-bg">
       <div class="home-video-control-blocker">
       </div>
-      <iframe width="1920px" height="1080px" src="https://www.youtube.com/embed/io_geMEyhek?autoplay=1&vq=hd1080&mute=1&controls=0&loop=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+      <iframe width="1920px" height="1080px" src="https://www.youtube.com/embed/Bdep4rxs5hM?autoplay=1&vq=hd1080&mute=1&controls=0&loop=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
     </div>
     <div class="home-info-column">
       <div class="home-info-box" v-bind:style="homeBoxStyles">
