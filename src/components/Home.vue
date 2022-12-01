@@ -56,7 +56,7 @@ export default {
     width:100%;
     padding-top: 56.25%;
     transition:opacity 500ms ease-in-out, transform 500ms ease-in-out;
-    box-shadow: 0px 5px 10px black;
+    box-shadow: 0px 5px 15px black;
   }
 
   .iframe {

@@ -1,27 +1,55 @@
 <template>
     <div class="sectional">
         <div class="section-standalone">
-            <div class="horiz-3070-left">
+            <div class="horiz-left">
                 <div class="portrait-main-container">
-                    <img src="/static/about/tate-headshot-june62020.jpg" />
+                    <img src="/static/about/tate-headshot-nov302022.jpg" />
                 </div>
             </div>
-            <div class="horiz-3070-right">
-                <div style="padding:20px">
-                    <h3 class="font-roboto-thin texttitle text-white">TATE PLAYER</h3>
-                    <p class="font-roboto-thin textsmall text-white">My name is Tate Player. I currently work as a Full-Stack Web Developer for "MojiLife" in Lindon, Utah.</p>
-                    <p class="font-roboto-thin textmedium text-white">WEB DEVELOPMENT</p>
-                    <p class="font-roboto-thin textsmall text-white">I've worked in this position for four years, since September 2016, and it was my entry into the professional world. Initially, I only had experience in the basics of PHP and code development processes, but through a desire for self-improvement I strengthened my knowledge and created more efficient, clean projects over time. I have also learned to refactor old and depreacated code where necessary.</p>
-                    <p class="font-roboto-thin textsmall text-white">During my Web Development position, I've learned several different concepts, including simple frontend applications, full-stack application communication, server setup, database management, and migrating. I have experienced working in teams, but have lead most projects in this position as a solo developer. I typically work with those outside of the programming scope, e.x. designers, managers, feedback testers and UX teams.</p>
-                    <p class="font-roboto-thin textmedium text-white">GAME DESIGN</p>
-                    <p class="font-roboto-thin textsmall text-white">I've been modding videogames for eight years. Initially, I started developing maps in the source engine and later learned about their amazing visual scripting logic tools. Eventually, I found myself becoming enthralled with developing how players would play and creating new types of interactions and elements. This lead me to start new types of projects that would explore game design concepts.</p>
-                    <p class="font-roboto-thin textsmall text-white">I typically lead these projects and create/evolve the ideas from start to finish, and sometimes work with teams of like-minded people to make them a reality. While Web Development has been a great learning experience for me, I some day hope to create videogame experiences, and help develop the worlds that players will be exploring. I like to create games that give players a sense of challenge and satisfaction, and lots of "Wow!" and "That was awesome!" moments that will keep them coming back to the experience.</p>
-                    <p class="font-roboto-thin textsmall text-white">I very much work to make sure that the experience in my head matches what the player plays -- so I'll try my hardest to always step around, break through and surpass technical limitations that may stop me, which is a skill I learned from my modding experience with more limited engines. If the game doesn't want me to do it, I'll change the game's mind. To this day, I still work on modding projects and innovate in new ways including internal systems and changing how players play existing games.</p>
-                </div>
+            <div class="horiz-right">
+                <h3 class="font-roboto-thin texttitle text-white">ABOUT ME</h3>
+                <p class="font-roboto-thin textsmallmed text-white">My name is Tate Player. I'm an aspiring Gameplay & Technical Designer in Salt Lake City, Utah.</p>
+                <p class="font-roboto-thin textsmallmed text-white">I love to build systems for games that are fun to interact with on the player-side, and easy to work on the developer side.
+                    I consider it important to make a system that the player engages with very comprehensive and fun to use, while also providing system scalability for design expansion over time.
+                    Both of these are a big key to making your game stand out against the rest -- and these are things I'm very experienced in!</p>
+                <p class="font-roboto-thin textsmallmed text-white">I am always open to learning any part of designing games, and am more than happy to pick up new tools when I need to to get the job done.
+                    This has given me opportunities to rapidly prototype games & systems I want to design on my own to reach a "proof-of-concept" stage before assembling teams to work on projects.
+                </p>
+                <p class="font-roboto-thin textsmallmed text-white">
+                    In my own time I like to work on personal projects at home, a large majority of them being video game related projects, but others being things like digital art and working on my car!
+                </p>
+                <p class="font-roboto-thin textmedium text-white">
+                    Language Proficiencies:
+                </p>
+                <ul>
+                    <li>C#</li>
+                    <li>GSC</li>
+                    <li>Lua</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>Svelte</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                </ul>
+                <p class="font-roboto-thin textmedium text-white">
+                    Tool Proficiencies:
+                </p>
+                <ul>
+                    <li>Unity</li>
+                    <li>Visual Studio Code</li>
+                    <li>Radiant Level Editor</li>
+                    <li>Svelte</li>
+                    <li>MySQL</li>
+                    <li>SQLite3</li>
+                    <li>Photoshop</li>
+                    <li>Hammer Editor</li>
+                    <li>Blender</li>
+                </ul>
             </div>
             <div class="about-links-container">
                 <a href="/static/about/tateplayer-resume-2020.pdf"><button class="about-link-button">Resume Document</button></a>
-                <router-link to="/projects" tag="button" class="about-link-button">Portfolio</router-link>
             </div>
         </div>
     </div>
@@ -34,15 +62,36 @@ export default {
 </script>
 
 <style scoped>
-    .horiz-3070-left {
-        vertical-align:top;
-        display:inline-block;
-        width:30%;
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
     }
-    .horiz-3070-right {
+
+    li {
+        display:inline-block;
+        border:1px solid white;
+        padding:10px;
+        color:white;
+        font-size:14px;
+        margin-right:5px;
+        font-family:"Roboto";
+    }
+    .horiz-left {
         vertical-align:top;
         display:inline-block;
-        width:70%;
+        width:20%;
+        box-sizing:border-box;
+        padding-left:20px;
+    }
+    .horiz-right {
+        box-sizing: border-box;
+        vertical-align:top;
+        display:inline-block;
+        width:80%;
+        padding-top:20px;
+        padding-left:20px;
+        padding-right:20px;
     }
     .portrait-main-container {
         padding:5%;
