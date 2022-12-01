@@ -1,33 +1,11 @@
 <template>
-  <div class="home-wrapper">
-    <div class="home-video-bg">
-      <div class="home-video-control-blocker">
-      </div>
-      <iframe width="1920px" height="1080px" src="https://www.youtube.com/embed/io_geMEyhek?autoplay=1&vq=hd1080&mute=1&controls=0&loop=1&playlist=io_geMEyhek" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
-    </div>
-    <div class="home-info-column">
-      <div class="home-info-box" v-bind:style="homeBoxStyles">
-        <div>
-          <h2 class="font-roboto-thin text-white home-info-name">
-            TATE PLAYER
-          </h2>
-        </div>
-        <div>
-          <h2 class="font-roboto-thin text-white home-info-job-titles">
-            Full-Stack Web Developer // Gameplay Designer // Technical Designer
-          </h2>
-        </div>
-        <div class="home-info-divider"></div>
-        <div>
-          <h2 class="font-roboto-thin text-white home-info-location">
-            Layton, Utah
-          </h2>
-        </div>
-        <div class="home-info-button-container">
-          <router-link :to="{ name: 'projects' }" tag="button" class="home-info-button">
-            View Portfolio
-          </router-link>
-        </div>
+  <div class="wrapper">
+    <div class="column">
+      <p class="title">
+        DEMO REEL
+      </p>
+      <div class="video" v-bind:style="homeBoxStyles">
+        <iframe class="iframe" width="1920px" height="1080px" src="https://www.youtube.com/embed/Bdep4rxs5hM?autoplay=0&vq=hd1080&mute=1&controls=1&loop=0" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -50,105 +28,42 @@ export default {
 }
 </script>
 
-<style>
-  .home-wrapper {
+<style scoped>
+  .wrapper {
+    display:flex;
+    justify-content: center;
     position:relative;
     width:100%;
-    height:100vh;
-    background-size:cover;
-    background-position:center center;
+    height:calc(100vh - 116px);
   }
-  .home-video-bg {
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    overflow:hidden;
-  }
-  .home-video-control-blocker {
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-  }
-  .home-info-column {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:50%;
-    height:100%;
-  }
-  .home-info-box {
-    width:80%;
-    height:40%;
-    /*background-color:rgb(32, 32, 32);*/
-    opacity:0;
-    transform:translateY( -10% );
-    transition:all 750ms ease-out;
-    transition-property: opacity, transform;
-    align-items:center;
-  }
-  .home-info-name {
-    font-size:64px;
-    text-shadow:2px 2px rgba( 0, 0, 0, 0.5 );
-    text-align:center;
-  }
-  .home-info-job-titles {
-    font-size:36px;
-    text-shadow:2px 2px rgba( 0, 0, 0, 0.5 );
-    text-align:center;
-  }
-  .home-info-location {
-    font-size:32px;
-    text-shadow:2px 2px rgba( 0, 0, 0, 0.5 );
-    text-align:center;
-  }
-  .home-info-divider {
-    width:100%;
-    height:1px;
-    background-color:white;
-    box-shadow:2px 2px 1px 1px rgba(0, 0, 0, 0.5);
-    margin-top:10px;
-    margin-bottom:10px;
-  }
-  .home-info-button-container {
+
+  .title {
     text-align:center;
     width:100%;
-    padding-top:20px;
-    padding-bottom:20px;
-  }
-  .home-info-button {
-    border:0;
-    background-color:rgb(20, 20, 20);
-    color:white;
     font-family:"Roboto";
     font-weight:200;
-    font-size:24px;
-    padding:20px;
-    background: linear-gradient( to bottom, rgb( 32, 32, 32 ) 50%, white 50%);
-    background-size:100% 200%;
-    background-position:left top;
-    transition:all 500ms ease;
-    transition-property:background-position, color;
-    cursor:pointer;
+    color:white;
+    font-size:42px;
+    text-decoration: none;
   }
-  .home-info-button:hover {
-    color:rgb(32, 32, 32);
-    background-position:left bottom;
+  .column {
+    width:70%;
+    height:100%;
   }
-  @media only screen and (max-width:787px)
-  {
-    .home-info-column {
-      width:100%;
-      margin:0;
-    }
-    .home-info-name {
-      font-size:42px;
-    }
-    .home-info-job-titles {
-      font-size:26px;
-    }
+
+  .video {
+    position:relative;
+    width:100%;
+    padding-top: 56.25%;
+    transition:opacity 500ms ease-in-out, transform 500ms ease-in-out;
+    box-shadow: 0px 5px 10px black;
+  }
+
+  .iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
   }
 </style>

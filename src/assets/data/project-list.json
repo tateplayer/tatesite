@@ -1,12 +1,12 @@
 {
     "projects": [
         {
-            "name": "tba-1",
-            "title": "Unnanounced Project",
-            "coverimage":"tba-icebreaker-cover.jpg",
+            "name": "plague",
+            "title": "Plague",
+            "logoimage": "plague-logo.png",
             "hidden": false,
             "type": "game",
-            "launchdate": "2021",
+            "launchdate": "2022",
             "content": [
                 {
                     "title": "Project Information",
@@ -85,7 +85,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -190,7 +190,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language)"
+                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language)"
                         }
                     ]
                 },
@@ -345,7 +345,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -444,7 +444,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language), Lua"
+                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
                         }
                     ]
                 },
@@ -708,7 +708,7 @@
                         },
                         {
                             "type": "text",
-                            "value": "Languages Used: GSC (C-Like Call of Duty Scripting Language)"
+                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language)"
                         }
                     ]
                 },

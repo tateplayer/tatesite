@@ -1,22 +1,22 @@
 <template>
- <router-link :to="{ name: 'project-view', params: { name: name } }" tag="div" v-if="!hidden" class="project-list-item">
+ <router-link :to="{ name: 'project-view', params: { name: project.name } }" tag="div" v-if="!project.hidden" class="project-list-item">
   <div class="project-list-item-inner">
    <div class="project-list-item-type">
-    <img v-if="type === 'web'" src="/static/icons/world-grid.png"/>
-    <img v-else-if="type === 'game'" src="/static/icons/console-controller.png"/>
+    <img v-if="project.type === 'web'" src="/static/icons/world-grid.png"/>
+    <img v-else-if="project.type === 'game'" src="/static/icons/console-controller.png"/>
    </div>
    <div class="project-list-item-logo">
-     <img v-bind:src="projectdata._logoImage" />
+     <img v-bind:src="logoImage" />
    </div>
-   <div class="project-list-item-bg" v-bind:style="projectdata.backgroundData">
+   <div class="project-list-item-bg" :style="{backgroundImage: coverImage}">
 
    </div>
    <div class="project-list-item-label">
       <div class="project-list-item-label-name">
-        <h2 v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'20px', delay:'100'}">{{ title }}</h2>
+        <h2 v-resize-text="{ratio:'1.2', minFontSize:'16px', maxFontSize:'20px', delay:'100'}">{{ project.title }}</h2>
       </div>
-      <div v-if="launchdate" class="project-list-item-label-date">
-        <h2 v-resize-text="{ratio:'1.2', minFontSize:'14px', maxFontSize:'18px', delay:'100'}">{{ launchdate }}</h2>
+      <div v-if="project.launchdate" class="project-list-item-label-date">
+        <h2 v-resize-text="{ratio:'1.2', minFontSize:'14px', maxFontSize:'18px', delay:'100'}">{{ project.launchdate }}</h2>
       </div>
    </div>
   </div>
@@ -31,51 +31,34 @@ export default {
     ResizeText
   },
   props: {
-    name: String,
-    title: String,
-    coverimage: String,
-    logoimage: String,
-    hidden: Boolean,
-    type: {
-      type: String,
-      required: false
-    },
-    launchdate: {
-      type: String,
-      required: false
-    }
+    project: Object
   },
   data: function () {
-    var logoimage
-    var coverimage
-
-    if (this.logoimage != null) {
+    var logoImage
+    var coverImage
+    if (this.project.logoimage != null) {
       try {
-        logoimage = require("@/assets/images/projects/logos/" + this.logoimage)
+        logoImage = require("@/assets/images/projects/logos/" + this.project.logoimage)
       } catch (e) {
-        logoimage = require("@/assets/images/projects/logos/none.png")
+        logoImage = require("@/assets/images/projects/logos/none.png")
       }
     } else {
-      logoimage = require("@/assets/images/projects/logos/none.png")
+      logoImage = require("@/assets/images/projects/logos/none.png")
     }
 
-    if (this.coverimage != null) {
+    if (this.project.coverimage != null) {
       try {
-        coverimage = "url(" + require("@/assets/images/projects/covers/" + this.coverimage) + ")"
+        coverImage = "url(" + require("@/assets/images/projects/covers/" + this.project.coverimage) + ")"
       } catch (e) {
-        coverimage = "url(" + require("@/assets/images/projects/covers/default-cover.png") + ")"
+        coverImage = "url(" + require("@/assets/images/projects/covers/default-cover.png") + ")"
       }
     } else {
-      coverimage = "url(" + require("@/assets/images/projects/covers/default-cover.png") + ")"
+      coverImage = "url(" + require("@/assets/images/projects/covers/default-cover.png") + ")"
     }
 
     return {
-      projectdata: {
-        backgroundData: {
-          backgroundImage: coverimage
-        },
-        _logoImage: logoimage
-      }
+      logoImage,
+      coverImage
     }
   }
 }

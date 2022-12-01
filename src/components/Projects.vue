@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="project-list">
-        <projectListItem v-for="project in projects" v-bind:key="project.name" v-bind="project"></projectListItem>
+        <projectListItem v-for="project in projects" :key="project.name" :project="project"></projectListItem>
       </div>
     </div>
   </div>
@@ -34,14 +34,17 @@ export default {
     return {
       projects: projectListData.projects
     }
-  },
-  mounted: function () {
   }
 }
 
 </script>
 
 <style>
+  .project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .project-list-section {
     width:100%;
   }
