@@ -8,15 +8,18 @@
             </div>
             <div class="horiz-right">
                 <h3 class="font-roboto-thin texttitle text-white">ABOUT ME</h3>
-                <p class="font-roboto-thin textsmallmed text-white">My name is Tate Player. I'm an aspiring Gameplay & Technical Designer in Salt Lake City, Utah.</p>
-                <p class="font-roboto-thin textsmallmed text-white">I love to build systems for games that are fun to interact with on the player-side, and easy to work on the developer side.
+                <p class="font-roboto-thin textsmallmed text-white">My name is Tate Player. I'm a Gameplay & Technical Designer in Salt Lake City, Utah.</p>
+                <p class="font-roboto-thin textsmallmed text-white">I love to build systems for games that are fun to interact with on the player-side, and easy to work with on the developer side.
                     I consider it important to make a system that the player engages with very comprehensive and fun to use, while also providing system scalability for design expansion over time.
-                    Both of these are a big key to making your game stand out against the rest -- and these are things I'm very experienced in!</p>
+                    Both of these are key to making your game stand out against the rest -- and these are things I'm very experienced in!</p>
                 <p class="font-roboto-thin textsmallmed text-white">I am always open to learning any part of designing games, and am more than happy to pick up new tools when I need to to get the job done.
-                    This has given me opportunities to rapidly prototype games & systems I want to design on my own to reach a "proof-of-concept" stage before assembling teams to work on projects.
+                    This has gives me opportunities to rapidly prototype games & systems to reach a "proof-of-concept" stage before assembling teams to work on projects.
                 </p>
                 <p class="font-roboto-thin textsmallmed text-white">
                     In my own time I like to work on personal projects at home, a large majority of them being video game related projects, but others being things like digital art and working on my car!
+                </p>
+                <p class="font-roboto-thin textsmallmed text-white">
+                    Professionally, I've worked in the web development field for 5 years in various Front and Back-end Engineering positions.
                 </p>
                 <p class="font-roboto-thin textmedium text-white">
                     Language Proficiencies:
@@ -46,6 +49,8 @@
                     <li>Photoshop</li>
                     <li>Hammer Editor</li>
                     <li>Blender</li>
+                    <li>Git</li>
+                    <li>Npm</li>
                 </ul>
             </div>
             <div class="about-links-container">

@@ -42,109 +42,56 @@
             "coverimage":"codware2-cover.jpg",
             "logoimage":"codware2-logo.png",
             "type": "game",
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware2/cw2_arena_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware2/cw2_breaktarget_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware2/cw2_instruct_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware2/cw2_shark_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware2/cw2_victor_fp.jpg"
+                }
+            ],
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "youtube",
-                            "value": "https://www.youtube.com/embed/Bdep4rxs5hM"
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare 2 was a complete from-scratch remake of CODWare 1. It was built to be a nice, smooth experience compared to the original version, allowing the rest of the team and I to showcase how our abilities have improved since the first installment. It also introduced several new minigames, updates to old ones, and an attempt at persistent progression -- keeping track of the winner from the previous match into the next one. For a refresher, CODWare is a gamemode where players are all in the same arena and will compete in several back-to-back minigames, each of which increases in speed as the match goes on, until the players must all face a major minigame at the end known as a \"Boss Round\". These minigames would rewards the players with points, and the player with the most points at the end of the game was declared the victor."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Like its predecessor, CODWare 2's design philosophy was to provide a casual, lightly-competitive party environment for players to enjoy — where skill wasn't really the important part, and the game was mostly about having fun. It was centered around being a jump-in-and-play experience that any type of player could hop into, supporting up to 18 players — but ideally played with 8-10 players. Short minigame instruction popups and wordplay keep players on their feet and laughing with and at each other."
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare, and CODWare 2, are both heavily inspired by TF2Ware, a modification for Team Fortress 2 that also takes inspiration from Nintendo's \"WarioWare\"."
-                        },
-                        {
-                            "type": "text",
-                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
-                        }
+                        "CODWare 2 is a sequelization of the original CODWare with the goal of re-creating the mode with a new codebase, providing systems that allowed for scalability for easy and quick addition of new minigames, boss games, and special rounds."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included leading the team, designing & scripting the gamemode structure, and designing & scripting each component in the gamemode including minigames, boss games, special game rules and the overall flow of the game. I worked with the other developer on the team to provide him with requirements for each playable area for the minigame, as well as assisted in coming up with ideas for theming the world."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project allowed me to improve my system creation methods, creating cleaner and more readable systems for external developers to plug into, as well as improve overall code readability."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
-                        }
-                    ]
-                },
-                {
-                    "title": "Sequel Changes Breakdown",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "As CODWare 2 functions, from a gameplay perspective, nearly identically to CODWare 1, I figured I'd instead write the \"updates\" that occured in this sequelization."
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare 2's first change involves a total rewrite of the game's systems. The minigame system has been totally replaced with an API that makes it easy to plug in new minigames, and sort them between types — standard and boss minigames. The API allows you to introduce a blocking minigame function for the actual minigame functionality, and a secondary function for handling whether or not the player should earn a point. A secondary function is optional, and will fall back to a normal functionality where players will score a point as long as they stayed alive. Minigames in this iteration of CODWare are all split into their own files based on an internal \"Series\"; all of the minigames available in the base game are part of \"Series 1\", and are all grouped up into a single script tree. If we were to introduce a second series, they would be given their own file and can easily be plugged in with a handful of lines of code."
-                        },
-                        {
-                            "type": "text",
-                            "value": "A feature was also introduced to help with tiebreakers — previously in CODWare, ties in score would choose the winner at random between all players with tied scoress, but in CODWare 2, players are thrown into a special tiebreaker round where they have to run to the center of a maze before all other players."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Every minigame was re-written from scratch, allowing me to make more consistent feeling ones and removing the \"glitchiness\" feeling that some of the minigames gave off on the original versions due to my lessened experience at the time."
-                        }
-                    ]
-                },
-                {
-                    "title": "Screenshots",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_arena_fp.jpg",
-                            "subtitle": "The main CODWare 2 Island arena."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_breaktarget_fp.jpg",
-                            "subtitle": "\"Break 3 Targets!\" boss game arena."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_instruct_fp.jpg",
-                            "subtitle": "\"Speed Up!\" minigame mechanic that increases minigame speed."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_shark_fp.jpg",
-                            "subtitle": "\"Avoid the Shark\" minigame arena."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware2/cw2_victor_fp.jpg",
-                            "subtitle": "Player victory screen."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "Design team member, contributed features and ideas for the gamemode.",
+                        "Created systems for parts of the gamemode that would benefit from re-usable code",
+                        "Gameplay UI implementation (integrating art, scripting the UI and prefabbing)",
+                        "Worked with a level designer and a UI designer to intergrate their work into the gamemode.",
+                        "Scripted the core gameplay management systems"
                     ]
                 }
             ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua",
+                "platforms": "PC",
+                "role": "Gameplay Design, Technical UI Design, Scripter, System Designer",
+                "years worked on": "2021" 
+            },
+            "youtube": "https://www.youtube.com/embed/Bdep4rxs5hM",
             "launchdate": "Feb 2020",
             "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1998420705"
         },
@@ -157,142 +104,55 @@
             "launchdate": "2020",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "Extinction: Ground War was an experimental project for Call of Duty: Black Ops 3 that involved introducing RTS-style gameplay into a PvP FPS environment. First and foremost, it was developed to be a gameplay experiment -- an attempt at combining two different gameplay ideals into one to create a new experience. This mode was birthed from my fascination with the Call of Duty: Ghosts \"Extinction\" Gamemode -- it was a fun, short-lived coop game developed by Infinity Ward. Ground War initially started as a \"port\" of the Extinction gamemode to Call of Duty: Black Ops 3, but as I wanted to learn more concepts and innovate, evolved into its own gamemode simply using the Aliens from the original Extinction mode as the face. The gameplay mechanics such as structure building and unit control were inspired by one of my favorite childhood games, \"Starcraft\"."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The project featured several new types of systems, including things like creating structures and bases, queuing unit spawns, commanding and directing units, and collecting resources. All systems in this new project assisted me in refining previous system development, including creating a nice pipeline for introducing new AI and Structures into their respective systems, wrapper functions and utility functions to make required data quick and accessible."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Unfortunately, this project has been put on hold due to an inescapable engine limit in Call of Duty: Black Ops 3 -- the engine has a hard limit of 64 active AI at a time, and my sketchup for this project involved each player having a large army to do battle with. I still have future plans to revisit this in a different PvP fashion, but I still want to share some of the fun systems made on this project."
-                        },
-                        {
-                            "type": "text",
-                            "value": "A project breakdown is available below."
-                        }
+                        "Extinction: Ground War was a rapid-prototype experiment in creating a new hybrid FPS-RTS gamemode on the Call of Duty engine. This was an exercise in system interactions and AI development that greatly strengthened my understanding of this type of development.",
+                        "The gameplay loop of the mode involved collecting a currency called \"DNA\" by eliminating enemies in the field, then using that currency to create your own units that could then be commanded to attack other enemies and explore the field. Your unit options were expanded by creating varying structures, which also costed DNA.",
+                        "Victory is achieved by defeating the other player's army entirely, then eliminating them."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on Extinction: Ground War involved designing & scripting the overall gameplay & systems, making initial level blockouts, designing AI enemy behavior, and working with a UI designer and a UI programmer."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project was an attempt at making new ways for players to interact with the world and environment. It was a great learning experience on how to twist the rules of the existing genre down to how players look around and explore."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language)"
-                        }
-                    ]
-                },
-                {
-                    "title": "Gameplay Breakdown",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "In Extinction: Ground War, the player's primary objective is to eliminate all players -- a classic \"last man standing approach\" -- however, there is more to it than just eliminating the other player. As long as a player still has living units, that player will respawn upon death. Players are only fully eliminated if their entire army is wiped out along with them. Each player's aliens and structures would have a unique color identifier, so that opposing players can tell which enemy belongs to which enemy player. The maps are designed to be symmetrical, with small sections where players can explore to find neutral enemies and set up more bases."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Each player would start with a main structure known as the \"Hatchery\", and three friendly units called \"Scouts\". From this point, players are tasked with creating a bigger army -- they need to expand their base by building more structures, and creating more and more units; these things would require you to spend a currency called \"DNA\". To inspire exploration and engagement, this currency was gained by defeating \"neutral aliens\" that spawn in certain areas."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-hatchery-starters.jpg",
-                            "subtitle": "Hatchery with three player Scouts in front"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Neutral alien spawn areas are separate zones that will spawn neutral aliens as long as players, or their units, are inside of that zone. To prevent a dull loop, or camping, surviving in these zones will get harder and harder the longer the player stays in there -- neutral aliens will spawn more and more often. This rate will reset once the player leaves the area -- this is to get players to want to return to their base, amass their army bigger and work on their structures rather than sitting in one place. Each zone's rate is independent to that zone, so a player in one zone will not affect the spawn rate of a player in another zone."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-neutral-aliens.jpg",
-                            "subtitle": "Neutral Aliens pursuing a player"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Defeating an alien, whether neutral or player-owned, will reward the player with DNA points based on what enemy type it was -- for instance, Scouts will reward the player with 25 DNA. The player will still earn the DNA whether or not they defeat the enemy directly with their gun, or using one of their units. This DNA, in turn, can be used to create structures and more units. These will cost different amounts of DNA depending on what kind of unit they are -- for example, a Scout will cost the player 50 units to produce."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-alien-battle.jpg",
-                            "subtitle": "Red Player's aliens fighting a group of Neutral Aliens"
-                        },
-                        {
-                            "type": "text",
-                            "value": "When creating structures and units, players will have to wait for them to be produced. During this state, these objects are more vulnerable to damage and easy to destroy. Once this time has passed, the structure or unit will have its full health pool and become usable or commandable. To incentivize base expansion, players are limited on how many units they can create -- initially, this limit is at 15, but if you build a certain type of structure called a \"Hive Colony\", this limit will be increased by 5. It is important to build several of these structures to expand the size of your army, meaning it was important to take areas to create a larger base. It was intended that, different types of structures would enable the player to create different types of units. Structures are created using a special tool that all players are equipped with called the \"Cortex Replicant\"."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-egg-progress.jpg",
-                            "subtitle": "Red Player's aliens being produced in placeholder \"Egg\" props. In the top left, the player is shown to have 12 out of 30 total allowed units."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-structure-tool.jpg",
-                            "subtitle": "Holding out the Structure Tool to build a Hive Colony"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once a player runs out of units and is eliminated by another player or player's unit, they will be eliminated from the game permanently, and cannot respawn. When all players but one are eliminated, the final surviving player will be declared the victor, and the game will end, returning all the players back to the lobby."
-                        }
-                    ]
-                },
-                {
-                    "title": "Unit States",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "Units are the primary part of Ground War, and as a result, are the most complex. Units can be manually commanded by the players if they wish, otherwise they will automatically patrol the area they spawned at and will attack any threats that come close to their patrol area. The player that owns a unit can select it by pressing their Action button while aiming at unit while in hipfire -- this will ping a location, and select all of the units within a radius, adding a red selection marker above the unit. If a player pings a location without any units in the area, the user will automatically deselect all previously selected units; but if they ping an area with units in it, the units will be added to their already selected group, allowing players to control up to 32 units at a time. If a player pings while aiming down their weapon's sights, it acts as a way to command a unit to go to a destination. The unit will go to this destination unless interrupted by an attack or are told to advance to a different location by the player."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/alienvs/alienvs-units-selected.jpg",
-                            "subtitle": "Red Player having selected several of their units."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Units can be set to several different \"think\" modes, allowing players to set units to fulfill certain roles in the battlefield. These modes can be switched by pressing the Action Slot buttons on the player's keybinds, or the D-Pad on a controller. The modes available are as follows:"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Idle: The unit will stay where they are and will fight against any threats nearby."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Patrol: The unit will patrol the local area and fight against any threats that come within its patrol area."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Follow: The unit will follow the commanding player and fight any threats that come near the unit or the player. Acts as a \"protection\" mode."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Passive: The unit will remain still and not attack any enemies, and will always move to the commanding player's marker. This mode is useful for getting a unit to leave a fight that they are losing."
-                        }
-                    ]
-                },
-                {
-                    "title": "Addendum",
-                    "values": 
-                    [
-                        {
-                            "type": "text",
-                            "value": "Ground War was a very fun experience -- I got to play with a lot of new ideas, all very unique compared to what I've made before. While it didn't quite finish the way I wanted it to, it ended up being a wonderful learning experience on design iteration, starting from a coop mode to a PvP mode, and also iterating on improving features to be more user-friendly from feedback. I hope to eventually be able to realize this mode into a finished project, but for now I am happy to share what I have developed while working on it."
-                        }
+                        "Created basic level design blockouts to assist with rapid prototyping of gameplay and behaviors",
+                        "Worked with a UI designer to implement their UI artwork into the gameplay loop",
+                        "Designed and implemented AI behavior and interactions",
+                        "Scripted the core gameplay management systems"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/alienvs/alienvs-hatchery-starters.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/alienvs/alienvs-neutral-aliens.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/alienvs/alienvs-alien-battle.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/alienvs/alienvs-egg-progress.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/alienvs/alienvs-structure-tool.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua",
+                "platforms": "PC",
+                "role": "Gameplay Design, Technical UI Design, Scripter, AI Scripter",
+                "years worked on": "2020" 
+            },
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1998420705"
         },
         {
             "name": "smash",
@@ -300,104 +160,56 @@
             "coverimage":"smashops-cover.png",
             "logoimage":"smash_ops_logo.png",
             "type": "game",
-            "launchdate": "Oct 2018",
+            "launchdate": "2018",
             "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1486119782",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "youtube",
-                            "value": "https://www.youtube.com/embed/D6xD4lnIafc"
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Smash Ops was my second attempt at creating a PvP gamemode in Call of Duty. In taking a more direct approach, players were tasked with eliminating each other to be the last one standing, or earn the most eliminations, depending on which game type players chose. This project involved exercising my abilities to create systems and integrate into existing systems, and provided me with opportunities to balance weapons and characters for a fair PvP experience."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This gamemode was intended to be a community-open project. Any developer within the community was intended to, at some point, be able to create maps and very quickly get Smash Ops up and running on them. By design, this gamemode only required a couple entities set up in order to get the game running; a few spawn points, locations for items to spawn, and playable bounds to mark where players are allowed to be to avoid elimination. The download was split up into pieces, one being the actual gamemode module, the rest being the stages. This way, it was super easy to choose the gamemode from the menu and hop into a map, also enabling for swifter integration and allowing players to only download the maps they actively wanted to play."
-                        },
-                        {
-                            "type": "text",
-                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
-                        }
+                        "Smash Ops was a PvP gamemode created for Black Ops 3 as another rapid prototype proof of concept.",
+                        "The gamemode places players inside of arenas that are much smaller than the standard Call of Duty map size, and replaces the traditional shoot-and-die mechanics of Call of Duty with an implementation of a fighting game-style damage-knockback system.",
+                        "Each of the game's built-in characters were re-purposed as loadouts, affecting the weapons and abilities the players could use during the game, all with different damage and knockback values.",
+                        "The gamemode shipped with two sub-gamemodes: lives-based and time-based."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included designing gameplay from conception to the final product, directing level designers on the philosophy behind creating maps for the mode, designing and scripting the UI and gamemode. I also handled creating/designing VFX and scripted the UI on the side, as well as creating the Final Destination stage from blockout to final product."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project allowed me to learn a lot about balancing and taking in feedback from a QA group. I was able to learn what players liked fighting, disliked fighting, and how to tweak weapons and characters to make the game feel enjoyable to play and not like any character was immediately better than the rest."
-                        },
-                        {
-                            "type": "text",
-                            "value": "In designing and developing the Final Destination stage, I was able to create a fake 3D animated skybox by attaching a very large VFX element to the player's camera, and using timers to swap to other VFX elements to fake the feel of the stage \"moving\" through space."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
-                        }
-                    ]
-                },
-                {
-                    "title": "Gameplay Breakdown",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/smash/so_finaldest.png",
-                            "subtitle": "Final Destination, one of the stages available."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Smash Ops' gameplay loop is that of a standard PvP FFA game; eliminate the most opponents before time is up, or be the last one standing. The difference in this mode is that players do not eliminate each other through conventional means of whittling down a health bar — instead, players must knock their opponent out of the arena's playbounds, similar to a boxing match. The twist is that, instead of weapons doing damage to players directly, it increases the victim's \"knockback value\", a value which determines how far back taking damage will fling the player. As this knockback value increases, players will be launched back further, the speed of which is computed using the initial impact damage from the weapon as well as the player's knockback value as a multiplier."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Building off of Black Ops 3's built-in \"specialist characters\", I assigned loadouts to each character. Players will choose a character based on their loadout, will always spawn with it, and cannot pick up weapons from fallen enemies. Each character is assigned a primary ranged weapon, and a secondary melee weapon, and a few are also assigned grenades or explosives to make up for weaker primary weapons. On the UI, the player can see their own current knockback value, as well as a portrait of who they are playing as. We were able to work around cluttering the screen with other players' knockback values by adding the most recently attacked opponent's knockback value beneath the player's crosshair."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/smash/so_katana_fp.jpg",
-                            "subtitle":"First-person shot from Seraph's perspective, one of the characters. In the bottom left, a knockback value of 8 is visible."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Smash Ops shipped with two gamemodes — \"stock\" and \"time\". In time mode, players would have three minutes to battle it out. Each elimination a player earned would give them one point towards victory, and every death would subtract one point. The game would keep track of who the last person was to damage a player, so that way victims couldn't cheat someone out of a point by jumping off the stage. In stock mode, players would all be given three lives, and their objective was to outlive all other opponents — Once a player ran out of lives, they could not respawn, so the win condition was to be the last person standing by any means. In both modes, players could only be eliminated by falling off the arena, or being launched out of the playable bounds."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/smash/so_glacier_fp.jpg",
-                            "subtitle":"Glacier, a stage developed by team member \"HitmanVere\"."
-                        },
-                        {
-                            "type": "text",
-                            "value": "To assist with ammo issues on ranged weapons throughout the match, ammo boxes would periodically appear and drop onto the stage. These ammo boxes would give the player's ranged weapon 10% of their ammo back, giving them a chance to keep a streak rolling."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once a winner is decided or the game timer ends, a UI popin announcing the end of the game will occur and all players' controls will get frozen. The screen will then transition over to a scene of all the players in the game standing in a line clapping, while the victorious player's name will be displayed on the screen, and their character in the front doing a victory-belt animation."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Smash Ops, as a concept, is a very simple and to-the-point kind of game, easy to hop in, play and understand. It was fun to re-invent the way players fight each other in Call of Duty, and gave me another fun opportunity to work on PvP gameplay."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "Balanced character weapon loadouts",
+                        "Created a system that would convert the Call of Duty damage model into our custom one",
+                        "Worked with a level designer to give them direction on balancing their level around the gamemode's mechanics",
+                        "Scripted the core gameplay management systems"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/smash/so_finaldest.png"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/smash/so_glacier_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/smash/so_katana_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/smash/so_shotgun_fp.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua",
+                "platforms": "PC",
+                "role": "Gameplay Design, Technical UI Design, Scripter",
+                "years worked on": "2018" 
+            },
+            "youtube": "https://www.youtube.com/embed/D6xD4lnIafc"
         },
         {
             "name": "bossrush",
@@ -407,187 +219,73 @@
             "type": "game",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "youtube",
-                            "value": "https://www.youtube.com/embed/io_geMEyhek"
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Boss Rush was a modification project developed for Call of Duty: Black Ops 3 centered around introducing a new Player vs Environment mode. As an avid fan of Sonic games, I decided I would create new ways to experience battles against some of my favorite characters from the games — having knowledge of the data structures from these games, they were good choices for asset pulling to create full experiences. These namely included two characters known as the Nega-Wisp Armor and Infinite, with initial plans for more in the future. This mode was my first experience creating a from-scratch gamemode, using only the base multiplayer framework for Call of Duty: Black Ops 3 to branch off of, as well as my first experience building & scripting AI."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The goal of this project was to create a flexible gamemode that would allow developers to easily introduce new enemies and encounters to the game by plugging into a core system, while also providing a fresh new gamemode for players to dive into. This core system would supply methods to track the time, score, lives, and declare victory and failure states for the game. The system also enabled management for hotjoining, and was my first venture into working with UI programming, involving a new heads-up-display for weapons, stats (such as score, time), and dynamic values such as boss health and name."
-                        },
-                        {
-                            "type": "text",
-                            "value": "A project breakdown is available below, or you can click the \"Visit Project\" link above to check it out for yourself!"
-                        }
+                        "Boss Rush was a PvE gamemode with the goal of diving into the understanding of the Havok AI systems provided with the CoD engine.",
+                        "Players would work together to fight a single strong enemy AI, placed inside of controlled arenas designed around how each AI would behave.",
+                        "AI were given distinct patterns that players could learn, but were still provided with small amounts of randomization to keep them on their feet. As the enemy's health would drop, new attacks were added to the pattern in order to keep the entire fight feeling fresh."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included leading the team, designing each encounter (incl. level blockout), structuring & writing the systems for the gamemode, structuring & writing the script that ran the AI for each encounter, VFX, and writing the code that displayed the UI and dynamically changed UI values on-screen."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Throughout this project, I learned about AI concepts such as managing and using behavior systems, state trees, and navigation. I also developed a system that made it easy implement new maps and encounters into the gamemode."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language), Lua"
-                        }
-                    ]
-                },
-                {
-                    "title": "Gameplay Breakdown",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "Boss Rush's structure is split into encounters, with the gamemode's system encompassing each encounter. Each encounter is a separate map file, and sets the players up to fight through a sequence, whether it be one enemy or several. When an encounter is complete, players are returned to the menu and can choose another map (or encounter) to load into."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_lobby_fp.jpg",
-                            "subtitle": "The \"pre-game lobby\" inside of Boss Rush."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Each encounter follows the same pre-game structure — when starting a match, players would be thrown into a \"pre-game lobby\" of sorts where players could wait, choose loadouts and plan before starting the game. Players would start an encounter by walking into the large black hole on the far side of the lobby. Once the black hole was entered, late-joining players would no longer be allowed to spawn — this was a gameplay rule set so that people couldn't leave and rejoin once they were out of lives. This lobby was part of every encounter map, and was required in order for your map to run the gamemode properly."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The pre-game lobby setup helped each encounter feel part of the same connected world. The intention was for the player to acknowledge that, in-world, Infinite was creating each of these encounters, as his character centers around creating \"illusions\" that feel very much real; as a result, the pre-game lobby was designed after Sonic Forces' \"Null Space\" area — a location between realities that Infinite creates things from."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Upon starting an encounter, all players will be moved into the encounter play area and will be greeted with a cutscene. Each encounter has its own, unique live intro cinematic to help make each encounter feel special, and set an initial tone for the upcoming battle. At this point, the game's state is now mid-battle — the timer will start, players will lose lives upon death, and players will also begin to have their score tracked."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_negawisp_score.jpg",
-                            "subtitle": "End-of-match score screen."
-                        },
-                        {
-                            "type": "text",
-                            "value": "At the end of the game, a score screen will pop-in and display the player's personal final score. The player's score is based on how quickly they completed the encounter, as well as an additional bonus for the number of lives they maintained by the end of the encounter. The time score is relative to a \"par time\", which is determined per-boss. If the players get better than the \"par time\", they get a massive score bonus."
-                        }
-                    ]
-                },
-                {
-                    "title": "Breakdown: Nega-Wisp Armor",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_negawisp_fp.jpg",
-                            "subtitle": "Mid-encounter against the Nega-Wisp Armor, one of the two encounters available at launch."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The Nega-Wisp Armor is the first encounter of the two available at launch. This fight is designed to be a constantly moving linear push, so the enemy will maintain a specific distance from the player and travel along the ring at the player's pace. Players are forced to keep moving by a \"death wall\" that moves slightly slower than the player's sprinting speed — this keeps a sense of urgency, and ensures that players will keep moving and maintain the pace of the encounter."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The Nega-Wisp Armor enemy AI is designed to properly change its forward distance from the player depending on the action — for instance, when doing the \"Cube\" attack, the enemy will move much further down the track to place down a maze of cubes that players must navigate through, while during the \"Laser\" attack, the enemy will only move forward a small amount to drag a laser beam across the field, making players chain jumps and slides together in order to avoid taking damage."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This enemy's design is a phase weak-points fight. Once the enemy has completed a certain chain number of attacks (which increases from 1 to 3 depending on how low the enemy's health is), the enemy will enter an \"idle\" state where a part of their body is weak to damage. Each weak point has a damage threshold, and once that damage threshold is reached, the enemy will react to the damage and flinch. During the flinch recovery animation, players will need to reach a second damage threshold check — which increases based on living player count. Upon reaching this second damage threshold, the enemy will take a large amount of damage and become stunned. This presents an option to the players — if they react quick enough, they can impact the enemy with an explosive or melee weapon, and deal a critical strike with a massive amount of damage that will launch the enemy further down the track. If the players do this optional piece, they will have a little bit of time to breathe before the enemy gets up, recovers and moves closer to the players again."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_negawisp_ko_fp.jpg",
-                            "subtitle": "The Nega-Wisp Armor after being hit with a critical strike."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The overarcing objective of the Nega-Wisp Armor encounter is to free 8 of the Wisp aliens from the enemy. A Wisp alien will be freed once the enemy reaches certain health thresholds, split up into eighths. Once a player frees a Wisp, it will act like a familiar and will orbit the player idly. This is a visual, in-world way to show the player's progression and was a fun little feature to experiment with. Players enjoyed this and talked about the familiars like they were their own little buddies! If a player is eliminated or runs out of lives while having a Wisp familiar, the familiar will choose the closest player to latch onto and will choose that player to follow until they need to change players again."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_negawisp_end_fp.jpg",
-                            "subtitle": "All wisps having been obtained and forming a ring."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once all Wisps have been freed, players will be prompted to press their jump button to have the Wisps unite. Each Wisp's name will be announced by the voice-over, and it will enter a state where it forms a ring with all of the other \"Wisps\". After all of their names have been called out, any player can hop into the formed ring and deal the final blow to the Nega-Wisp Armor, knocking the enemy far away and ending the encounter. This will trigger the game to end, the timer will stop, and each player will be presented with their score card."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Visual Level Design in these screenshots attributed to Exofile and Tatsu, two project members."
-                        }
-                    ]
-                },
-                {
-                    "title": "Breakdown: Infinite",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_infinite_intro.jpg",
-                            "subtitle": "The introduction cutscene against Infinite."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Infinite is the second of the two available encounters. This encounter is designed to be a lot more freeing than the Nega-Wisp Armor encounter. In this encounter, the enemy is about the same size as the player, and can fly around the playspace freely. The enemy will choose a favorite target depending on a \"threat bias\", then will attack that target accordingly. Other players can easily tell who this enemy is targeting, as the enemy will always stay a certain distance away from their target."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This arena is a circle shape with a donut hole in the middle, provide a few fall hazards to keep players on their toes. Around the arena are small abnormalities, like pillars and pits, to make the environment feel more varied. I was fairly limited in how this arena was designed because it needed to fit the \"Null Space\" aesthetic, which is largely made up of grid-locked cubes. The final design didn't evolve much past the blockout."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_infinite_diving_fp.jpg",
-                            "subtitle": "Infinite diving towards the player."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Infinite's attacks are all designed for single-player targeting, and all interact in a way that requires the player have to make quick, split-second decisions to avoid taking damage. As Infinite's health drops, he will chain more attacks before changing phases, introduce more attacks, and mutate pre-existing attacks. For instance, Infinite's initial attack list involves throwing three homing projectiles at their target — but once the health drops to 60%, the number of projectiles will double. These reactive changes are designed to give the player a sense of urgency that Infinite is becoming more irritated, therefore throwing more at the player in order to stop them."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_infinite_pillars_fp.jpg",
-                            "subtitle": "Infinite's reactive difficulty pillar attack."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Some of Infinite's reactive difficulty changes involve adding a new attack. This attack has Infinite summon a few pillars with lightning arcing off of them — something clearly very dangerous! Infinite will then scatter these around their target player, creating a sort of \"cage\" around the player that lasts for ~1 minute. This cage is easily escapable, but if the player panics too hard, they will take a lot of damage before escaping the cage due to running into the pillars. This attack was added in order to slightly change up the flow of fighting Infinite, and enable him to take control of the play area a little bit more."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_infinite_healing_fp.jpg",
-                            "subtitle": "Infinite during the healing phase."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The design of this fight is a damage-per-second fight with attack windows. During the duration of the fight, Infinite will have a red shield encapsulating them that will block all forms of incoming damage. After a certain number of attacks have been chained (which depends on the reactive difficulty), Infinite will teleport to the center of the arena and drop his shield to recharge it and heal himself. During this phase, a DPS check occurs in which players can do a certain amount of damage before Infinite is done recharging — during which Infinite takes 1/2 incoming damage. If successful, Infinite will become stunned and will take full incoming damage while recovering from the stun. The stun, and heal phase, both last a different length based on the number of players in the match. When the reactive difficulty reaches a certain point, Infinite will instead fire an attack at players and juke to the side before entering his recharge state."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/bossrush/br_infinite_outro.jpg",
-                            "subtitle": "Infinite during the outro cutscene."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Upon depleting Infinite's health pool, the game will enter a cutscene state with an in-game rendered outro cinematic. Once this scene is completed, the game will end, the timer will stop and players will have their score reported to them."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "Designed & implemented AI and identified ways to improve their behavior to reduce or increase difficulty based on feedback",
+                        "Gameplay UI implementation for the core HUD and the enemy health bars",
+                        "Worked with an environment artist to ensure artistic input aligned with gameplay integrity",
+                        "Created level designs that adhered to the behavior of each individual AI"
                     ]
                 }
             ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_infinite_diving_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_infinite_healing_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_infinite_intro.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_infinite_pillars_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_lobby_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_negawisp_end_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_negawisp_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_negawisp_ko_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/bossrush/br_negawisp_score.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua",
+                "platforms": "PC",
+                "role": "Gameplay Design, Technical UI Design, Scripter, Level Design, AI Scripting",
+                "years worked on": "2017, 2018" 
+            },
+            "youtube": "https://www.youtube.com/embed/io_geMEyhek",
             "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1532706684",
-            "launchdate": "Oct 2018"
+            "launchdate": "2018"
         },
         {
             "name": "mojivr",
@@ -596,67 +294,48 @@
             "logoimage":"mojilife-vr-logo.png",
             "type": "web",
             "url": "http://www.mojilifevr.com",
-            "launchdate": "Jan 2018",
+            "launchdate": "2018",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "MojiLife VR (also known as MojiRelax) was a website project that acted as a \"VR relaxation\" tech initiative to try to reach a casual, novelty part of the tech market. These were a collection of 360-degree videos for use with simplified VR headsets, and were developed for use with the MojiRelax VR shell -- a VR HMD that used a smartphone insert to view these videos."
-                        },
-                        {
-                            "type": "text",
-                            "value": "These videos were intended to be paired up with an active MojiLife AirMoji device. When purchasing a MojiRelax VR HMD, the consumer would receive a sheet that would offer a list of fragrances to pair with each video. Pairing a fragrance with a VR video was intended as a therapeutic relaxation therapy experience, and were lengthy to be a sort of \"sit back and relax\" activity. It needed to be an easily accessible experience for all audiences that were interested -- a very casual, easy approach for trying out the relaxation experience."
-                        },
-                        {
-                            "type": "text",
-                            "value": "On the homepage, users were greeted with a mobile-friendly responsive homepage that would list all of the videos we had to offer, including a recommended one as the main focus. When selecting a video, if on a non-mobile device, users would be greeted with a pop-up that loads the video on an embedded overlay player; if on a mobile device, the user would be directed to a new, independent page with the video player as the entire page. This was to make the experience in swapping into VR mode very quick and easy, and autoplay was enabled on the player to assist in that."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The video player used the A-Frame Javascript Framework to render the VR videos. The controls, popin, and more were all handled by jQuery. Videos were processed via a PhP process backend, and a standard javascript upload functionality from the end user. These were only uploaded by those who managed MojiRelax VR."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "MojiLife VR was a project made in conjunction with the previous MojiLife team as a venture into the casual VR space.",
+                        "The website featured a variety of 360 degree looping videos that were designed to offer users a chance to experience a relaxing VR environment using something as simple as their phones.",
+                        "A proprietary VR shell with a slot to insert the user's phone was created and sold for this project."                   
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included developing both the frontend and backend of the website, setting up & deploying the server and database, and maintaining them. I worked with a design team to build several iterations of the site, and supplied them with progress updates and took feedback."
-                        },
-                        {
-                            "type": "text",
-                            "value": "I used the Laravel Framework for the backend, and jQuery and A-Frame for the frontend. I learned the A-Frame framework throughout the entirety of this project, having no knowledge when initially entering, and was developed in a little less than four months. This project was very short-lived, as it was not a viable choice for the company, but I did my best work on it to make sure that while it was in service, it felt nice to use."
-                        }
-                    ]
-                },
-                {
-                    "title": "Screenshots",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_homepage.jpg",
-                            "subtitle": "MojiRelax Home Page."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_video_list.jpg",
-                            "subtitle": "Video Selection List with our four available videos."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojirelax/mr_video_player.jpg",
-                            "subtitle": "The video player itself."
-                        }
+                        "Created a back-end server for uploading videos and streaming them out to users",
+                        "Created a custom front-end video player that interfaced with the A-Frame 3D rendering framework to enable 360 degree video playback in VR",
+                        "Managed input and output from a MySQL database"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojirelax/mr_homepage.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojirelax/mr_video_list.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojirelax/mr_video_player.jpg"
+                }
+            ],
+            "detail": {
+                "framework": "Laravel Framework PHP5",
+                "languages": "PHP5, CSS3, Javascript A-Framae",
+                "platforms": "Web, Mobile",
+                "role": "Full-Stack Software Engineer",
+                "years worked on": "2018" 
+            }
         },
         {
             "name": "mindshare",
@@ -667,173 +346,59 @@
             "launchdate": "Sep 2017",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "youtube",
-                            "value": "https://www.youtube.com/embed/jNZ_DUbaCZI"
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        },
-                        {
-                            "type": "text",
-                            "value": "Mindshare was the final episode in a series I had created of Custom Call of Duty Zombies modifications known as \"Nova Six\". This installment acted as a culmination of everything I had learned previously, and I had used it to very much push this engine as hard as I could to create a very fun, unique experience. This mod hosted quite a few new features, as well as massive overhauls on previous features and systems I had included in previous installments."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project was about creating a big, intense finale that would include lots of fun, interesting and challenging features for players who had stuck along for the entire ride. I worked hard to make a consistent, immersive atmosphere with a very \"alive\" background environment, a brand new music system, storytelling and overall environmental feel. I used the existing Call of Duty Zombies map, \"Moon\", as a kickstart for this atmosphere, and it ended up becoming something I'm still very proud of to this day."
-                        }
+                        "Mindshare was a Call of Duty Zombies fan-project modification. The goal of this project was to bolt on to an existing gamemode and change or add features to provide a varied experience.",
+                        "This project didn't change the central gameplay flow of Zombies, but introduced a feature where players would complete 6 objectives to enable the power for certain interactables around the map.",
+                        "Mindshare was my first venture into AI, but due to a limitation in the Black Ops engine, was actually a specially designed pseudo-AI, accomplishing the goal in the face of being unable to interface with the game's actual pre-compiled navmesh."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on Mindshare included leading the team, designing & developing the scripts & systems for all of the new gameplay elements, designing & developing the scripts for AI, creating VFX for the new enemies and environment, and tweaking/balancing new weapons and enemies. I lead and worked with a few render artists, graphics designers and QA teams to get a custom UI for the mod, some visual renders to assist in displaying things to players, and receive feedback on functionalities, features and changes." 
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project gave me a big opportunity to completely overhaul all of my previous systems — they weren't that great in previous installments, felt unsatisfying and clunky for the player to use, and were very difficult to maintain. One of the major systems I overhauled was the Gobblegum system — previously, it was only a random number generator with predefined routes to pull an item from the gumball machines, but in this installment the system had been rewritten to be an API-like structure that made it very simple and swift to add new powerups to the gumball machines. Because of this, I was able to jam in quite a few gumball powerups that had not existed in previous iterations."
-                        },
-                        {
-                            "type": "text",
-                            "value": "I was also able to include persistent unlocks — when the player completes Mindshare's quest for the first time, they'll unlock a hidden power weapon, unlocked perk limit and a cash bonus on their next playthrough of the game."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Mindshare is one of the greatest examples of mine of working past an engine's technological limitations to make sure the game still played out the way I wanted it to in my head. There were plenty of first-time things that were executed in this modification that had not yet been done before."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Languages Used: GSC (C#-Like Call of Duty Scripting Language)"
-                        }
-                    ]
-                },
-                {
-                    "title": "Gameplay Breakdown",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "Mindshare itself is an add-on on top of the existing Call of Duty Zombies mode, so I'll be detailing the individual gameplay features I added on here instead."
-                        },
-                        {
-                            "type": "text",
-                            "value": "To start, I bolted a secondary progression flow onto the map. In a typical Zombies map, you're tasked with opening every door in the map, and activating a central power switch. Instead, I replaced the singular power switch with a system where players have to activate several pylons around the map, also known as \"Solar Engines\" — lore-wise, these existed as engines that would use raw star energy to power things. One of these pylons was located in each of the map's 6 quadrants, and completing each one would turn on the resources and buyable items in each area. This changed how players progressed the map, as they wanted to clear out certain areas before others to activate these resources."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_solar_fp.jpg",
-                            "subtitle": "Special marked zombies in front of a powering-up Solar Engine."
-                        },
-                        {
-                            "type": "text",
-                            "value": "When activating a Solar Engine, players would be tasked with staying near it and eliminating marked Zombies within the pylon's proximity. The Solar Engines would automatically spawn in new zombies with an orange glow attached to them, marking them as the enemies the players need to target. After the Solar Engine has the proper number of Zombies eliminated, the task will be successful, and the Solar Engine will activate the attached resources. The Solar Engines were systemized as well, so it was very easy for me to create new locations for them, assign post-activation functions and flags, and set up spawn points for the special marked zombies. This meant that, while prototyping, I could iterate the design swiftly and each instance would be updated with new functionalities and fixes."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_shop_fp.jpg",
-                            "subtitle": "The Shop offering a special weapon."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Another system I worked on was a \"shop\" system that operated on game rounds. This shop would open up when its associated Solar Engine was activated, and would begin to sell items. The shop offered weapons (some unique to the shop with special abilities), and another new feature called \"trinkets\", which acted as passive abilities players would have until they bled out. The shop offered one item at a time, and could be cycled out by either purchasing the item or progressing the game's rounds by one. This shop was introduced as a way for players to more easily get what they want, have an extra weapon available and also provide some unique items and ideas such as the trinkets and special weapons."
-                        },
-                        {
-                            "type": "text",
-                            "value": "I also introduced a few new types of AI enemies (which I'll go into detail in the next sections), and added a full-length hidden story quest full of puzzles, kill challenges and exploration. A full walkthrough of the hidden story quest is available on the project's download page. The story quest ended with a space-flight boss encounter in a separate map, including a few cutscenes, with one being animated by a fellow developer Luna, and the other being animated by me. I scripted custom scene logic to encapsulate these cutscenes into easily-implementable objects. After this space-flight encounter, which was against the Nomads and the Nomad Battlecruiser, players were dropped into a second, grand finale encounter against the \"Time Eater.\""
-                        }
-                    ]
-                },
-                {
-                    "title": "Challenges: The Nomads",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "One of the major challenges I faced during development is that the primary enemy AI for this mod, the \"Nomads\", were intended to be a vehicle entity that would be able to fly around and navigate. Unfortunately, due to a strict limitation in the game, I learned that you cannot inject vehicles into an already-built map file. As a clever workaround, these AI were instead spawned model entities! I used root motion animation, false-physics mathematics and a couple clever visual tricks to make these enemies give off the vibe that they were a full vehicle entity."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_marduk_fp.jpg",
-                            "subtitle": "A single nomad flying in front of the \"Marduk\" Nomad Battlecruiser."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The thought process of developing these AI were that Zombies, as a core mode, has always had very ground-centric enemies whose only function was to run straight towards the player. I wanted to shake this up, so developing the Nomads was a huge step in the right direction for me. This was one of my earliest instances of making a \"thinking\" AI — these Nomads understood when a player was looking at them, and would target them or perform a dodge move to avoid getting attacked."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Navigation-wise, this AI could not integrate with the game's standard NavVolume and pathfinding system due to the no-vehicle limitation. Instead, I worked around this by creating \"spheres of influence\" — these were sperhical zones that were invisible to players, placed above the player's playable area, and were the places where Nomads \"legally\" had to be in order to attack a player. When a Nomad wanted to target a player, they'd look up every sphere of influence that is currently accessible in the map (defined as an area that players can also access), choose the closest one and move to it. Once the Nomad finishes moving, they will then be allowed to attack their target player."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_nomads_fp.jpg",
-                            "subtitle": "Three nomads attacking the players during a Nomad Round."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The Nomads were intended to be an \"ever-present threat\", so part of the atmosphere building in this mod included squadrons of Nomads flying above the non-playable area, as well as an occassional passing-by \"Marduk\", a very large Nomad Battlecrusier variant, which also acts as the primary final boss. The Nomads themselves would attack every five rounds in-game, and replace the standard zombie rounds with a round where the players fought only Nomad fliers."
-                        }
-                    ]
-                },
-                {
-                    "title": "Challenges: The Time Eater",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "The Time Eater AI was a second big challenge. The advantage I had with the Time Eater is that it existed in a separate, from-scratch map, so I had a lot more freedom, but due to the fact that the Time Eater's assets, and itself, were split into eight parts, I couldn't write the Time Eater as a vehicle either."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_timeeater_title_fp.jpg",
-                            "subtitle": "The Time Eater's intro sequence."
-                        },
-                        {
-                            "type": "text",
-                            "value": "In place of the vehicle entity, the Time Eater had a single \"core\" piece — the head and chest — that would act as the anchor and attachment point for all other parts. To make the Time Eater feel alive and as if it were all one piece, each part was mounted on to the chest piece and plugged into a special system. This system had the animations assigned to each piece of the body with identifiers, and used calls to this system using these identifier keywords to tell each piece of the body to animate with its respective animation. These pieces were very modular, and as a result I was able to design an attack where the Time Eater would detach his arm and send it through \"time\" to smack the player with it."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_timeeater_arm_fp.jpg",
-                            "subtitle": "The Time Eater placing his arm through a portal."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Another limitation of the Time Eater is that one of his attacks was based on slowing the timescale of the server down — which unfortunately, is a mechanic that does not work in multiplayer. Due to this, the Time Eater's time slowdown attack behaves in two different ways — in singleplayer, the server's timescale gets cut in half for ten seconds, but in multiplayer, I worked around this limitation by making the Time Eater move and act twice as fast during this attack, to give off the \"other perspective\" of time being slowed down, while still maintaining the design idea."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_timeeater_clock_fp.jpg",
-                            "subtitle": "The Time Eater slowing down time."
-                        },
-                        {
-                            "type": "text",
-                            "value": "As the fight went on and players did more damage, the bottoms arms of the Time Eater would fall off to show that players are doing some meaningful damage to the enemy. Upon reaching the final phase, the players would be given an adrenaline-pumping power moment where they are given the Fury's Song from the previous installment, but this time powered up and charged up, and must run down a final hallway to strike the Time Eater with the sword, ending in a magnificent, cinematic explosion and marking the end of the series."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mindshare/ms_timeeater_death.jpg",
-                            "subtitle": "The Time Eater dying."
-                        }
-                    ]
-                },
-                {
-                    "title": "Addendum",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "Overall, Mindshare was a very, very fun project to work on, and included a lot of fun new experimentation, pushing an engine to its limits, and working past technological boundaries to create the experience I wanted to make. This project was wonderful to work on, and I consider it one of my best pieces of work."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "Worked with a UI designer to identify needed graphics and implemented them into the game.",
+                        "Designed new features that changed the gameplay flow of the existing level design.",
+                        "Created a dynamic pseudo-AI to make more dynamic encounters."
                     ]
                 }
             ],
-            "url": "https://forum.modme.co/resources/mindshare.3/"
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_marduk_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_nomads_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_shop_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_solar_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_timeeater_arm_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mindshare/ms_timeeater_death.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC",
+                "platforms": "PC",
+                "role": "Gameplay Design, Scripter, AI Scripting",
+                "years worked on": "2017" 
+            },
+            "url": "https://forum.modme.co/resources/mindshare.3/",
+            "youtube": "https://www.youtube.com/embed/jNZ_DUbaCZI"
         },
         {
             "name": "codware",
@@ -845,149 +410,64 @@
             "launchdate": "Mar 2017",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "youtube",
-                            "value": "https://www.youtube.com/embed/IXloZKbsz0I"
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare was my first attempt at a PvP gamemode in a full-scale playercount (18 players maximum), as well as my first dive into a \"live-service\" approach for a project. This gamemode was what made me fall in love with developing PvP-type games, and also gave me an opportunity to develop a from-scratch gamemode to change Call of Duty into my own experience — taking the standard PvP gameplay of the game, and spinning it on its head to be a fun, hop-in-and-go party game."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This gamemode initially started as a remake of the \"TF2Ware\" custom gamemode in Call of Duty, but eventually evolved into something more, adding new features, new minigames, and evolving past being only a remake. I introduced customization options, pre-game lobbies, unique new minigame ideas, and even took advantage of existing Call of Duty mechanics to create these minigames, such as wallrunning and jetpacks."
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare had my largest overall community outreach, clocking in at almost 30,000 unique downloads (29,756 to be precise!)"
-                        }
+                        "CODWare was a PvP gamemode with the goal of creating a completely fresh arcade-like experience on the Black Ops 3 engine.",
+                        "The gameplay loop had players going through a variety of randomly-sorted fast-pace minigames, called \"microgames\". These games would vary in activity, and would randomly sort players into teams or free-for-all alignment in order to accomplish their goal. With each minigame completed, the minigames would get faster paced.",
+                        "Victory was achieved by having the highest score after 15 minigames, and a \"boss minigame\" were completed. To keep things fresh, \"special rounds\" were introduced that would change the rules of the game, such as flipping the victor to be the player with the lowest score.",
+                        "An update was later introduced that added more minigames and added pseudo-AI functionalities to some minigames, using \"Sonic the Hedgehog\" themed fan content."
+                    
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this project included designing the gamemode from conception to the final product, scripting the gamemode and systems, and directing the level designer on the requirements for the arenas and minigames."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This was my first pass experimenting with making expandable systems, as well as my first attempt at making a totally new gamemode for Call of Duty. I also worked past lots of technical limitations of this game when developing the \"Dr. Robotnik's Invasion\" event update, which is detailed in the \"Live Service\" section below."
-                        }
-                    ]
-                },
-                {
-                    "title": "Gameplay Breakdown",
-                    "values": [
-                        {
-                            "type": "text",
-                            "value": "The flow of CODWare and its sequel begins with all of the players getting thrown into an primary arena together. While in this area, players can all see each other and hit each other with their chosen melee weapon, but no players can take damage. This lets players toy with each other and creates a bit of a \"punching bag\" effect for between rounds. During this introduction sequence, the game logic will roll to see if a \"Special Round\" should be enabled, which changes or adds fundamental rules of the game. After the introduction sequence is complete, the standard gameplay loop begins. This loop involves choosing one minigame from the full list of available minigames, and initializes it."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_hatchet_fp.jpg",
-                            "subtitle": "\"Hatchet Toss\" minigame."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Each minigame active is global, and every player that is part of the match is always involved in the minigame, so long as they have not been permanently disqualified by a special rule. When partcipating, players will earn 1 point if they successfully complete the minigame's instructions. Some minigames require a player to do something individually, i.e. \"Nailgun Jump\", while some require players to interact with each other directly, i.e. \"Kill an Enemy\",  — minigames all have variety, and all play very differently from each other, with each goal requiring players to have to adjust quickly."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_nailjump_fp.jpg",
-                            "subtitle": "\"Nailgun Jump\" minigame."
-                        },
-                        {
-                            "type": "text",
-                            "value": "When a minigame begins, its instructions are displayed on the top of the player's HUD. Some instructions are straight forward, while some involve wordplay — for example, in this minigame, players will be told to \"Fight and Stay Alive\". Instinctively, players begin to fight each other and eliminate each other, but cunning players will understand that the instructions of the minigame state specifically to stay alive. If the player avoids conflict, without actually eliminating another player, they will earn a point. As the game goes on, minigames will increase in speed (or become shorter in duration), this tests players' ability to react and pushes them towards understanding each minute part of a minigame to make sure they can complete it in time."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Some minigames have special arenas to help shake things up and introduce new rules. A minigame like \"Avoid the Shark\" takes place inside of a pool, with one player acting as a \"shark\" while the other players have to avoid getting eliminated by that player. Another example of this is \"Get to the End\" — a minigame where players are teleported into an obstacle course, and are required to get to the end of the obstacle course before time runs out."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_platform_fp.jpg",
-                            "subtitle": "\"Get on a Platform!\" minigame."
-                        },
-                        {
-                            "type" :"text",
-                            "value": "Once a certain number of minigames is completed (typically 15), all players will need to participate in a \"Boss Round\" — these games are longer, larger minigames that sometimes pit players against each other in teams. The goals for these games can range from surviving in an asymmetrical setting, traveling a long obstacle course, shooting a number of targets and more. These rounds will reward the victorious player(s) with five points total rather than one point — these rounds are often used as an opportunity to snipe a win away from someone, allowing players to tip the scales by winning one of these rounds."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Some boss minigames may introduce extra special, invisible rules — for example, the \"Break the Target\" boss minigame allows players to kill each other with their supplied weapon. A killed player during this minigame is not eliminated, but will incur a respawn penalty, which will vastly reduce the amount of time they have to break targets."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_margwa_fp.jpg",
-                            "subtitle": "\"Break the Target\" minigame and special arena."
-                        },
-                        {
-                            "type": "text",
-                            "value": "After completing the boss game, all of the players' scores will be tallied up and compared. The player with the most points will be declared the victor, and it will be announced to the server. The victorious player is given their loadout (built by the player before loading into the match) and invulnerability. During this victory period, the winning player is allowed to recklessly kill all of the other players, while the other players cannot hurt each other or the victor. During the next match, the winning player will also be given a crown to represent their victory. This acts as a small reward, and allows the victorious player to have an \"in your face!\" moment to their friends and opponents."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once the victory period is complete, the match will automatically start anew. CODWare is designed as a \"play until you're tired\" type of game — so this gamemode-restart cycle will continue until the host ends the game or all players leave."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
-                    ]
-                },
-                {
-                    "title": "\"Live Service\"",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_eggbot_invasion_fp.jpg",
-                            "subtitle": "\"Dr. Robotnik's Invasion\" title card."
-                        },
-                        {
-                            "type": "text",
-                            "value": "CODWare was my first attempt at \"live service\"; we had updates planned that would add new minigames and events. Due to time circumstances with my professional life, this \"live service\" dream wasn't quite realized past our first event, but the first event was still quite an enjoyable success that many players enjoyed coming back to the game for."
-                        },
-                        {
-                            "type": "text",
-                            "value": "The first (and unfortunately last) event for CODWare was one themed after my favorite character in gaming \"Dr. Robotnik\" — this is, of course, a fan project and has no direct affiliation with SEGA. The event, \"Dr. Robotnik's Invasion\", introduced a few new quality-of-life features, as well as five new minigames and three new boss minigames and an update to the atmosphere & environment. I had our level designer build \"audience stands\" into the main arena, which allowed me to add a fake audience of animated robotniks built by Dr. Robotnik — I can't help but to add a little bit of extra atmosphere!"
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_robotnik_battle_fp.jpg",
-                            "subtitle": "\"Dr. Robotnik\" boss battle."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Events were a secondary structure to CODWare in this update, and added a couple fun features. When an event was active, just before the minigame sequence started, a special \"intro scene\" with an event logo would pop up to notify players that they are playing a limited-time, event version of CODWare. On top of this, the new minigames had a higher chance of being pulled from the pool, and players would always fight the \"Dr. Robotnik\" boss minigame at the end of a match in addition to the . Eventually, having to play this minigame at the end of every match became dull for players, so I ended up pulling that feature and just moved Robotnik into the boss games pool."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/codware/cw_robotnik_update_fp.jpg",
-                            "subtitle": "\"Metal Sonic\" boss battle."
-                        },
-                        {
-                            "type": "text",
-                            "value": "These games also gave me an opportunity to introduce a new type of minigame: a competitive co-op minigame. In these minigames, every player would be pit up against a common enemy. Players who did the most damage to this common enemy would earn bonus points, and players who survived at all would qualify for points. Perma-death occurs during these games, so if all players die, everyone fails and nobody will earn any points, even if someone outputs the most damage."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Once the event concludes, the minigame weighting is returned to normal, and all special event minigames are moved into the regular pool. Arena theming changes back to normal, but leaves behind a small mark of the previous event's theme permanently — we wanted to give this arena a \"history\" as we pushed more events into the game."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Working on this update was very fun; it gave me the opportunity to evolve my gamemode and its structure, as well as play with a lot of new ideas, and give the environment a whole fresh atmosphere. Some things were very tricky to execute in the Call of Duty engine, but I put some extra effort in to bend the engine and make everything play the way I had in my head. Overall, this update was enjoyable to work on and I would love to do it again given the time and resources."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "Worked with a level designer to create a map that would accomodate each minigame",
+                        "Designed a variety of small minigames to keep the gameplay fresh through each loop",
+                        "Identified & revised minigames that may have been to difficult or confusing for players"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_hatchet_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_margwa_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_nailjump_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_platform_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_eggbot_invasion_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_robotnik_battle_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/codware/cw_robotnik_update_fp.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua",
+                "platforms": "PC",
+                "role": "Gameplay Design, Scripter, System Designer",
+                "years worked on": "2017" 
+            },
+            "youtube": "https://www.youtube.com/embed/IXloZKbsz0I"
         },
         {
             "name": "mojilife",
@@ -999,64 +479,45 @@
             "launchdate": "Dec 2016 - 2020",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "MojiLife is a web-based direct sales and e-commerce organization. The website offers users the ability to purchase products from the site, and have them shipped to their address. Users can also sign up as Distributors, which users are allowed to order through and enables the Distributor to earn commission back for sales. There are other features offered as well, including group ordering, subscription services, and also has a few outbound API connections for WMS and shipping. The website uses PHP with the Laravel Framework as its backend, and connects to a MySQL database."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project being a live site often has new changes, features, and fixes constantly — while on this site, I was the primary developer with a secondary back-up team (who was an outsourced team that had developed the base of the website), but we approached things with the \"agile\" development scheme. During this project, I held a solo title of \"Full-Stack Developer\", working on both frontend and backend for the site's lifecycle, as well as server maintenance here and there."
-                        },
-                        {
-                            "type": "text",
-                            "value": "On this project, I came in later after the base had been developed and was the first project in my professional career. I learned the concepts of backend and frontend development while active at this job, starting with minimmal experience and ending up where I am now. I was able to learn, and then take a somewhat nonsensical codebase, interpret it, improve upon it and build on to it. I have spent a lot of time replacing existing, previous systems that weren't up to standards, and replacing them with fresh, clean new ones that improved the user experience in terms of readability and loadtime. I also worked with a UI designer to create a \"one-page flow\" for products sales, making checkout for users quick and efficient."
-                        },
-                        {
-                            "type": "outbound-url",
-                            "value": "Visit Project"
-                        }
+                        "MojiLife was my first professional project, and is an E-commerce website centered around a Multi-Level Marketing business model.",
+                        ""
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities included developing new backend systems and functionalities, developing frontend systems, implementing frontend designs, database maintenance and management, and overall maintained the website throughout its lifecycle. I worked closely with UI/UX teams, marketing teams, and even the company head to develop new features and ideas, as well as providing assistance with designing experiences for users and making the website more accessible and appealing to use."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Over the years, I have iterated over features to improve them, and have even replaced large parts of the website, including a from-scratch shopping cart system. I also developed all involved API connections, which included subscriptions to a digital app, 2 different warehouse management services that we have moved between, 4 different shipping API services, and 3 different payment merchants."
-                        },
-                        {
-                            "type": "text",
-                            "value": "Most of these projects were code-designed, developed and implemented on my own. I acted as a solo developer throughout most of this website's lifecycle, only really working with others who were in charge of visual design, UI/UX, and other team members. I also took on tasks of repairing code from the previous developers & team, which in part also had me deciding to re-build parts of the previous work to be easier to maintain in the future."
-                        }
-                    ]
-                },
-                {
-                    "title": "Screenshots",
-                    "values": [
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojilife/ml_homepage.jpg",
-                            "subtitle": "Homepage."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojilife/ml_cart.jpg",
-                            "subtitle": "The Cart page from my \"Cart v2\" system developed throughout 2019."
-                        },
-                        {
-                            "type": "image",
-                            "value": "/static/projects/mojilife/ml_onepage_fragrance.jpg",
-                            "subtitle": "\"One-page flow\" for product sales. The selected product will pop-out from the bottom of the related row."
-                        }
+                        "Managed both front-end and back-end interfaces, creating systems as needed",
+                        "Brought into the project to maintain an existing code-base, one of my main responsibilities was to revise the existing code and bring it up to standards.",
+                        "Worked with a variety of designers and directors to deliver a positive customer-facing experience",
+                        "Managed input and output from a MySQL database"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojilife/ml_cart.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojilife/ml_homepage.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/mojilife/ml_onepage_fragrance.jpg"
+                }
+            ],
+            "detail": {
+                "framework": "Laravel PHP5",
+                "languages": "PHP, Javascript, MySQL",
+                "platforms": "Web",
+                "role": "Full-Stack Software Engineer",
+                "years worked on": "2016 - 2020" 
+            }
         }
     ]
 }
