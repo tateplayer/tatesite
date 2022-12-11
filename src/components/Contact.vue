@@ -3,7 +3,7 @@
         <div class="section-standalone" style="padding-top:30px;padding-bottom:30px;">
             <div class="section-container">
                 <h3 class="font-roboto-thin texttitle text-white">CONTACT</h3>
-                <p class="contact-paragraph-spaced">For business queries and other requests along those lines, you can send me an e-mail at <a href="mailto:contact@tateplayer.codes">contact@tateplayer.codes</a>.</p>
+                <p class="contact-paragraph-spaced">Want me to design systems, action-to-action gameplay or implement your beautiful UI design? Let's chat! You can reach out to me at <a href="mailto:contact@tateplayer.codes">contact@tateplayer.codes</a>.</p>
                 <ul class="contact-paragraph-spaced font-roboto-thin textsmall text-white contact-list">
                     <li><a class="link-white textmedium" href="https://www.linkedin.com/in/kameron-player-ab2010147/"><button class="contact-link-button">LinkedIn</button></a></li>
                 </ul>

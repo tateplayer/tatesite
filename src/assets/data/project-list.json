@@ -6,35 +6,68 @@
             "logoimage": "plague-logo.png",
             "hidden": false,
             "type": "game",
-            "launchdate": "2022",
+            "launchdate": "WIP",
             "content": [
                 {
-                    "title": "Project Information",
+                    "title": "PROJECT OVERVIEW",
+                    "type": "default",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "TBA is an unannounced project currently in progress that focuses to be an entire new \"expansion\" to Call of Duty: Black Ops 3. This expansion will be a standalone co-op gamemode, with a target of 4-6 players per a match. It will feature several new concepts that have yet to be explored in modding, and is developed with an internal API that will be usable by other users to enable us to promote custom maps for this expansion in the future."
-                        },
-                        {
-                            "type": "text",
-                            "value": "This project will include ground-up, never before seen AI that will challenge how players think and play this game, and will also include lots of variety for the standardized enemy types to provide a comfortable gameplay mix-up and keep things fresh. The intention is to create something that is new and different, with lots of options that will provide players that have an itch to keep playing to try new ways to play and experiment. It will be accessible, but still challenging -- players may have to fail a level a few times before they can truly understand how to succeed if they're new to the game."
-                        },
-                        {
-                            "type": "text",
-                            "value": "TBA is being developed by a team of four people, and will include brand new maps, a new weapon arsenal, new enemies, its own soundtrack, and lots of unique features all scripted from-scratch specifically for this expansion."
-                        }
+                        "Plague is a PvE mobile base defense roguelite gamemode with the goal of creating a full new experience on a pre-existing engine. This gamemode is built from-scratch, with all systems involved being developed new for this gamemode.",
+                        "The gamemode implements many features not yet seen in this iteration of the CoD engine, such as stacking perk systems, looting, weapon attachment mix-matching during gameplay, and a shopping system that allows players to spend earned in-game points to pull RNG in their favor.",
+                        "The gameplay loop involes players finding objectives in each section of the map and completing them while hordes of enemies attack them. Several different variations of enemies are introduced as the match goes on to keep the gamemode engaging."
                     ]
                 },
                 {
-                    "title": "Responsibilities",
+                    "title": "MY CONTRIBUTION",
+                    "type": "list",
                     "values": [
-                        {
-                            "type": "text",
-                            "value": "My responsibilities on this expansion include leading & directing the project from inception, developing & maintaining all gameplay script and code, developing all UI script and code, developing all of the AI behavior, and prototyping level design. I am currently working with a full team of Level Designers, Modelers, Animators, Audio Engineers and Graphics Designers."
-                        }
+                        "Lead the project from conception, collaborating with team members and fleshing out ideas",
+                        "Created systems for parts of the gamemode that would benefit from re-usable code",
+                        "Gameplay UI implementation (integrating art, scripting the UI and prefabbing)",
+                        "Worked with level designers, environment artists, sound designers and UI designers to implement their work",
+                        "Scripted the core gameplay management systems",
+                        "Designed and implemented AI behaviors for a variety of enemies to support varying playstyles",
+                        "Designed and implemented character abilities and weapons balancing"
                     ]
                 }
-            ]
+            ],
+            "images": [
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_doublebarrel_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_fumigation_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_perks_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_badger_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_1911_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_tobi_fp.jpg"
+                },
+                {
+                    "type": "image",
+                    "value": "/static/projects/plague/plague_syringe_fp.jpg"
+                }
+            ],
+            "detail": {
+                "engine": "CoD Engine (IW Engine)",
+                "languages": "CoD GSC, Lua, Python",
+                "platforms": "PC",
+                "role": "Project Lead, Gameplay Design, Technical UI Design, System Design, AI Behavioral Design",
+                "years worked on": "2020-2022" 
+            }
         },
         {
             "name": "codware-2",
@@ -88,7 +121,7 @@
                 "engine": "CoD Engine (IW Engine)",
                 "languages": "CoD GSC, Lua",
                 "platforms": "PC",
-                "role": "Gameplay Design, Technical UI Design, Scripter, System Designer",
+                "role": "Gameplay Design, Technical UI Design, Scripter, System Design",
                 "years worked on": "2021" 
             },
             "youtube": "https://www.youtube.com/embed/Bdep4rxs5hM",
@@ -464,7 +497,7 @@
                 "engine": "CoD Engine (IW Engine)",
                 "languages": "CoD GSC, Lua",
                 "platforms": "PC",
-                "role": "Gameplay Design, Scripter, System Designer",
+                "role": "Gameplay Design, Scripter, System Design",
                 "years worked on": "2017" 
             },
             "youtube": "https://www.youtube.com/embed/IXloZKbsz0I"

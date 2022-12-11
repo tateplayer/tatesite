@@ -5,7 +5,7 @@
         DEMO REEL
       </p>
       <div class="video" v-bind:style="homeBoxStyles">
-        <iframe class="iframe" width="1920px" height="1080px" src="https://www.youtube.com/embed/Bdep4rxs5hM?autoplay=0&vq=hd1080&mute=1&controls=1&loop=0" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+        <iframe class="iframe" src="https://player.vimeo.com/video/779402990?h=0e7d76cc5e" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
       </div>
     </div>
   </div>

@@ -8,15 +8,15 @@
         <div v-if="images.length > 0" @hook:mounted="setStep" class="carousel">
           <div class="carousel-focus-outer">
             <div class="carousel-focus">
-              <img :src="images[0].value"/>
+              <img draggable="false" v-if="focusImage" :src="focusImage.value"/>
             </div>
           </div>
           <div class="carousel-selector">
             <div class="carousel-selector-inner">
-              <button class="carousel-button start">&lt;</button>
+              <button class="carousel-button start" v-on:click="prev">&lt;</button>
               <div class="carousel-list" ref="list" :style="innerStyles">
-                <div class="carousel-item" v-for="image in images" :key="image.value">
-                  <img :src="image.value"/>
+                <div class="carousel-item" :class="{ 'carousel-outline': focusImage.value == image.value }" v-for="image in images" :key="image.value" v-on:click="setImage(image)">
+                  <img draggable="false" :src="image.value"/>
                 </div>
               </div>
               <button class="carousel-button end" v-on:click="next">&gt;</button>
@@ -119,6 +119,7 @@ export default {
     this.images = this.selectedProject.images || undefined
     this.detail = this.selectedProject.detail || undefined
     this.youtube = this.selectedProject.youtube || undefined
+    this.focusImage = this.images[0]
 
     setTimeout(() => {
       this.containerStyles = {"transform": "translateY(0%)", "opacity": 100}
@@ -148,6 +149,34 @@ export default {
       })
     },
 
+    prev () {
+      if (!this.step) {
+        this.setStep()
+      }
+
+      if (this.transitioning) return
+
+      const image = this.images.pop()
+      this.images.unshift(image)
+
+      this.innerStyles = {
+        transition: "none",
+        transform: `translateX(-${this.step})`
+      }
+
+      this.transitioning = true
+      setTimeout(() => {
+        this.innerStyles = {
+          transform: `translateX(0)`
+        }
+      })
+
+      this.afterTransition(() => {
+        this.resetTranslate()
+        this.transitioning = false
+      })
+    },
+
     update () {
       this.innerStyles = {
         transform: `translateX(-${this.step})`
@@ -167,6 +196,10 @@ export default {
         transition: "none",
         transform: "translateX(0)"
       }
+    },
+
+    setImage (newImage) {
+      this.focusImage = newImage
     }
   },
   data () {
@@ -180,6 +213,7 @@ export default {
       logoImage: "",
       title: undefined,
       images: {},
+      focusImage: {},
       content: {},
       detail: {},
       youtube: undefined,
@@ -267,6 +301,7 @@ export default {
     left:0;
     height:auto;
     transition: transform 0.2s;
+    user-select:none;
   }
   .carousel-item {
     display:inline-block;
@@ -275,12 +310,15 @@ export default {
     width:200px;
     margin-right:5px;
     height:calc(200px * .5625);
+    user-select: none;
+    cursor:pointer;
   }
   .carousel-item > img {
     position:absolute;
     top:0;
     left:0;
     width:100%;
+    user-select: none;
   }
 
   .side {
@@ -396,6 +434,7 @@ export default {
     font-size:48px;
     font-weight:200;
     border:0;
+    user-select: none;
   }
   .carousel-button.start {
     left:0;
@@ -405,5 +444,17 @@ export default {
   .carousel-button.end {
     right:0;
     background:linear-gradient(to right, rgba(0 0 0 / 0%), rgba(0 0 0 / 100%));
+  }
+
+  .carousel-outline::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+    border:2px solid white;
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
   }
 </style>
