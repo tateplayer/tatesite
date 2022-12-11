@@ -34,7 +34,7 @@ export default {
     justify-content: center;
     position:relative;
     width:100%;
-    height:calc(100vh - 116px);
+    min-height:calc(100vh - 116px);
   }
 
   .title {
