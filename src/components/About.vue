@@ -54,7 +54,7 @@
                 </ul>
             </div>
             <div class="about-links-container">
-                <a href="/static/about/tateplayer-resume.pdf"><button class="about-link-button">Resume Document</button></a>
+                <a href="/static/about/tate-player-resume-12112022.pdf"><button class="about-link-button">Resume Document</button></a>
             </div>
         </div>
     </div>
